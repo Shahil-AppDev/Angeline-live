@@ -1,0 +1,30 @@
+{"level":"INFO","message":"Initializing Live Core","timestamp":1768751439266,"agentId":"MAIN"}
+{"level":"INFO","message":"✅ Oracle Manager initialized","timestamp":1768751439268,"agentId":"MAIN"}
+{"level":"INFO","message":"Initializing Live Core","timestamp":1768751452850,"agentId":"MAIN"}
+{"level":"INFO","message":"✅ Oracle Manager initialized","timestamp":1768751452853,"agentId":"MAIN"}
+{"level":"INFO","message":"✅ TikFinity webhook server started","timestamp":1768751452891,"agentId":"MAIN"}
+{"level":"INFO","message":"✅ Health monitor started","timestamp":1768751452893,"agentId":"MAIN"}
+{"level":"WARN","message":"⚠️ OBS connection failed: ","timestamp":1768751452886,"agentId":"MAIN"}
+{"level":"INFO","message":"✅ LLM client initialized","timestamp":1768751452892,"agentId":"MAIN"}
+{"level":"INFO","message":"✅ Live Core API listening on port 3001","timestamp":1768751452896,"agentId":"MAIN"}
+{"level":"INFO","message":"Mode set to AUTO","timestamp":1768751751060,"agentId":"ORCHESTRATOR"}
+{"level":"INFO","message":"🚀 Starting live...","timestamp":1768752287054,"agentId":"ORCHESTRATOR"}
+{"level":"INFO","message":"✅ Live started","timestamp":1768752287055,"agentId":"ORCHESTRATOR"}
+{"level":"INFO","message":"🛑 Stopping live...","timestamp":1768752289622,"agentId":"ORCHESTRATOR"}
+{"level":"INFO","message":"✅ Live stopped","timestamp":1768752289637,"agentId":"ORCHESTRATOR"}
+{"level":"INFO","message":"Mode set to AUTO","timestamp":1768752339732,"agentId":"ORCHESTRATOR"}
+{"level":"INFO","message":"Initializing Live Core","timestamp":1768753438655,"agentId":"MAIN"}
+{"level":"INFO","message":"✅ Oracle Manager initialized","timestamp":1768753438658,"agentId":"MAIN"}
+{"level":"WARN","message":"⚠️ OBS connection failed: ","timestamp":1768753438693,"agentId":"MAIN"}
+{"level":"INFO","message":"✅ TikFinity webhook server started","timestamp":1768753438698,"agentId":"MAIN"}
+{"level":"INFO","message":"✅ LLM client initialized","timestamp":1768753438699,"agentId":"MAIN"}
+{"level":"INFO","message":"✅ Live Core API listening on port 3001","timestamp":1768753438789,"agentId":"MAIN"}
+{"level":"INFO","message":"✅ Health monitor started","timestamp":1768753438701,"agentId":"MAIN"}
+{"level":"INFO","message":"Dashboard connected via WebSocket","timestamp":1768753440134,"agentId":"WEBSOCKET"}
+{"level":"INFO","message":"Mode set to FORCED","timestamp":1768753454307,"agentId":"ORCHESTRATOR"}
+{"level":"INFO","message":"Dashboard disconnected","timestamp":1768753469172,"agentId":"WEBSOCKET"}
+{"level":"INFO","message":"Dashboard connected via WebSocket","timestamp":1768753469890,"agentId":"WEBSOCKET"}
+{"level":"INFO","message":"🚀 Starting live...","timestamp":1768753489337,"agentId":"ORCHESTRATOR"}
+{"level":"INFO","message":"✅ Live started","timestamp":1768753489338,"agentId":"ORCHESTRATOR"}
+{"level":"INFO","message":"Processing message from TestUser","timestamp":1768753491586,"agentId":"ORCHESTRATOR"}
+{"level":"ERROR","message":"Reading failed: No cards available for oracle ORACLE_WOOD_FAIRY","timestamp":1768753491590,"agentId":"ORCHESTRATOR"}

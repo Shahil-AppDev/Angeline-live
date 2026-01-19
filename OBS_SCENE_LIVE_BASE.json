@@ -1,0 +1,354 @@
+{
+  "scene_name": "LIVE_BASE",
+  "canvas_width": 1080,
+  "canvas_height": 1920,
+  "sources": [
+    {
+      "name": "BG_LOOP",
+      "type": "ffmpeg_source",
+      "settings": {
+        "local_file": "C:\\Users\\Utilisateur\\Documents\\Angeline-live\\assets\\visuals\\backgrounds\\BG_LOOP.mp4",
+        "looping": true,
+        "restart_on_activate": true,
+        "hw_decode": true,
+        "clear_on_media_end": false
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0
+      },
+      "bounds": {
+        "type": "OBS_BOUNDS_SCALE_INNER",
+        "alignment": 0,
+        "x": 1080,
+        "y": 1920
+      },
+      "filters": [
+        {
+          "name": "Luminosité/Contraste",
+          "type": "color_filter",
+          "settings": {
+            "brightness": -0.2,
+            "contrast": 0.1,
+            "saturation": 0.1
+          }
+        }
+      ]
+    },
+    {
+      "name": "OVERLAY_GRADIENT",
+      "type": "image_source",
+      "settings": {
+        "file": "C:\\Users\\Utilisateur\\Documents\\Angeline-live\\assets\\visuals\\overlays\\gradient.png"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0
+      },
+      "bounds": {
+        "type": "OBS_BOUNDS_SCALE_INNER",
+        "alignment": 0,
+        "x": 1080,
+        "y": 1920
+      },
+      "blend_mode": "OBS_BLEND_NORMAL",
+      "opacity": 0.3
+    },
+    {
+      "name": "LOGO_TITRE",
+      "type": "text_gdiplus_v2",
+      "settings": {
+        "text": "✨ ANGELINE NJ ✨",
+        "font": {
+          "face": "Cinzel Decorative",
+          "size": 72,
+          "style": "Bold"
+        },
+        "color": 4294956800,
+        "align": "center",
+        "valign": "top",
+        "outline": true,
+        "outline_size": 2,
+        "outline_color": 4278190080,
+        "drop_shadow": true,
+        "shadow_offset": 5,
+        "shadow_color": 4278190080
+      },
+      "position": {
+        "x": 540,
+        "y": 50
+      },
+      "alignment": 1
+    },
+    {
+      "name": "CARD1",
+      "type": "image_source",
+      "settings": {
+        "file": "C:\\Users\\Utilisateur\\Documents\\Angeline-live\\assets\\oracles_assets\\ORACLE_MYSTICA\\backs\\back.jpeg"
+      },
+      "position": {
+        "x": 150,
+        "y": 500
+      },
+      "scale": {
+        "x": 0.56,
+        "y": 0.56
+      },
+      "rotation": -5,
+      "filters": [
+        {
+          "name": "Ombre portée",
+          "type": "shadow_sdf_filter",
+          "settings": {
+            "offset_x": 0,
+            "offset_y": 10,
+            "blur_radius": 15,
+            "color": 4278190080,
+            "opacity": 80
+          }
+        },
+        {
+          "name": "Lueur",
+          "type": "color_filter",
+          "settings": {
+            "brightness": 0.05,
+            "saturation": 0.15
+          }
+        }
+      ]
+    },
+    {
+      "name": "CARD2",
+      "type": "image_source",
+      "settings": {
+        "file": "C:\\Users\\Utilisateur\\Documents\\Angeline-live\\assets\\oracles_assets\\ORACLE_MYSTICA\\backs\\back.jpeg"
+      },
+      "position": {
+        "x": 400,
+        "y": 450
+      },
+      "scale": {
+        "x": 0.616,
+        "y": 0.616
+      },
+      "rotation": 0,
+      "filters": [
+        {
+          "name": "Ombre portée",
+          "type": "shadow_sdf_filter",
+          "settings": {
+            "offset_x": 0,
+            "offset_y": 15,
+            "blur_radius": 20,
+            "color": 4278190080,
+            "opacity": 90
+          }
+        },
+        {
+          "name": "Lueur Or",
+          "type": "color_filter",
+          "settings": {
+            "brightness": 0.08,
+            "saturation": 0.2
+          }
+        }
+      ]
+    },
+    {
+      "name": "CARD3",
+      "type": "image_source",
+      "settings": {
+        "file": "C:\\Users\\Utilisateur\\Documents\\Angeline-live\\assets\\oracles_assets\\ORACLE_MYSTICA\\backs\\back.jpeg"
+      },
+      "position": {
+        "x": 650,
+        "y": 500
+      },
+      "scale": {
+        "x": 0.56,
+        "y": 0.56
+      },
+      "rotation": 5,
+      "filters": [
+        {
+          "name": "Ombre portée",
+          "type": "shadow_sdf_filter",
+          "settings": {
+            "offset_x": 0,
+            "offset_y": 10,
+            "blur_radius": 15,
+            "color": 4278190080,
+            "opacity": 80
+          }
+        },
+        {
+          "name": "Lueur",
+          "type": "color_filter",
+          "settings": {
+            "brightness": 0.05,
+            "saturation": 0.15
+          }
+        }
+      ]
+    },
+    {
+      "name": "FX_SMOKE",
+      "type": "ffmpeg_source",
+      "settings": {
+        "local_file": "C:\\Users\\Utilisateur\\Documents\\Angeline-live\\assets\\visuals\\effects\\FX_SMOKE.mp4",
+        "looping": false,
+        "restart_on_activate": false,
+        "hw_decode": true,
+        "clear_on_media_end": true
+      },
+      "position": {
+        "x": 140,
+        "y": 200
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0
+      },
+      "bounds": {
+        "type": "OBS_BOUNDS_SCALE_INNER",
+        "alignment": 0,
+        "x": 800,
+        "y": 800
+      },
+      "blend_mode": "OBS_BLEND_SCREEN",
+      "opacity": 0.7,
+      "visible": false
+    },
+    {
+      "name": "USERNAME_TEXT",
+      "type": "text_gdiplus_v2",
+      "settings": {
+        "text": "@username",
+        "font": {
+          "face": "Poppins",
+          "size": 36,
+          "style": "Regular"
+        },
+        "color": 4294967295,
+        "align": "center",
+        "valign": "top",
+        "outline": false,
+        "drop_shadow": true,
+        "shadow_offset": 3,
+        "shadow_color": 4278190080
+      },
+      "position": {
+        "x": 540,
+        "y": 1100
+      },
+      "alignment": 1
+    },
+    {
+      "name": "QUESTION_TEXT",
+      "type": "text_gdiplus_v2",
+      "settings": {
+        "text": "Question de l'utilisateur...",
+        "font": {
+          "face": "Poppins",
+          "size": 42,
+          "style": "SemiBold"
+        },
+        "color": 4294956800,
+        "align": "center",
+        "valign": "top",
+        "outline": true,
+        "outline_size": 1,
+        "outline_color": 4278190080,
+        "drop_shadow": true,
+        "shadow_offset": 4,
+        "shadow_color": 4278190080,
+        "extents": true,
+        "extents_cx": 1000,
+        "extents_wrap": true
+      },
+      "position": {
+        "x": 540,
+        "y": 1150
+      },
+      "alignment": 1
+    },
+    {
+      "name": "ANSWER_TEXT",
+      "type": "text_gdiplus_v2",
+      "settings": {
+        "text": "Réponse de l'oracle...",
+        "font": {
+          "face": "Playfair Display",
+          "size": 48,
+          "style": "Regular"
+        },
+        "color": 4294967295,
+        "align": "center",
+        "valign": "top",
+        "outline": false,
+        "drop_shadow": true,
+        "shadow_offset": 5,
+        "shadow_color": 4278190080,
+        "extents": true,
+        "extents_cx": 1000,
+        "extents_wrap": true
+      },
+      "position": {
+        "x": 540,
+        "y": 1300
+      },
+      "alignment": 1,
+      "filters": [
+        {
+          "name": "Lueur Violette",
+          "type": "color_filter",
+          "settings": {
+            "brightness": 0.03,
+            "saturation": 0.1
+          }
+        }
+      ]
+    },
+    {
+      "name": "SFX_SHUFFLE",
+      "type": "ffmpeg_source",
+      "settings": {
+        "local_file": "C:\\Users\\Utilisateur\\Documents\\Angeline-live\\assets\\audio\\shuffle\\shuffle.wav",
+        "looping": false,
+        "restart_on_activate": false
+      },
+      "volume": 0.8,
+      "monitoring_type": "OBS_MONITORING_TYPE_MONITOR_OFF"
+    },
+    {
+      "name": "SFX_FLIP",
+      "type": "ffmpeg_source",
+      "settings": {
+        "local_file": "C:\\Users\\Utilisateur\\Documents\\Angeline-live\\assets\\audio\\flip\\flip.wav",
+        "looping": false,
+        "restart_on_activate": false
+      },
+      "volume": 0.8,
+      "monitoring_type": "OBS_MONITORING_TYPE_MONITOR_OFF"
+    }
+  ],
+  "metadata": {
+    "version": "1.0",
+    "created_for": "Angeline Live - TikTok Oracle System",
+    "canvas_format": "9:16 (1080x1920)",
+    "description": "Scène préconfigurée pour live TikTok de voyance/oracle avec 3 cartes, textes et effets",
+    "requirements": [
+      "OBS Studio 28.0+",
+      "obs-websocket v5",
+      "Polices: Cinzel Decorative, Poppins, Playfair Display"
+    ]
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "version": "1.0.0",
+  "description": "Configuration des oracles disponibles pour Angeline NJ Live",
+  "oracles": {
+    "ORACLE_ALENA": {
+      "id": "ORACLE_ALENA",
+      "name": "L'Oracle à Léna",
+      "description": "Oracle doux et bienveillant, spécialisé dans les relations et l'amour",
+      "card_count": 44,
+      "assets_path": "oracles_assets/ORACLE_ALENA",
+      "themes": ["SENTIMENTAL", "FAMILLE"],
+      "tone": "doux, maternel, réconfortant",
+      "card_format": {
+        "type": "image",
+        "extension": "png",
+        "naming_convention": "card_{number}.png"
+      }
+    },
+    "ORACLE_STANDARD": {
+      "id": "ORACLE_STANDARD",
+      "name": "L'Oracle",
+      "description": "Oracle classique polyvalent pour toutes situations",
+      "card_count": 52,
+      "assets_path": "oracles_assets/ORACLE_STANDARD",
+      "themes": ["ALL"],
+      "tone": "neutre, sage, équilibré",
+      "card_format": {
+        "type": "image",
+        "extension": "png",
+        "naming_convention": "card_{number}.png"
+      }
+    },
+    "ORACLE_NJ_FAMILY": {
+      "id": "ORACLE_NJ_FAMILY",
+      "name": "Nj Family",
+      "description": "Oracle spécialisé dans les dynamiques familiales",
+      "card_count": 36,
+      "assets_path": "oracles_assets/ORACLE_NJ_FAMILY",
+      "themes": ["FAMILLE"],
+      "tone": "direct, honnête, protecteur",
+      "card_format": {
+        "type": "image",
+        "extension": "png",
+        "naming_convention": "card_{number}.png"
+      }
+    },
+    "ORACLE_NJ": {
+      "id": "ORACLE_NJ",
+      "name": "L'Oracle NJ",
+      "description": "Oracle signature Angeline NJ, puissant et direct",
+      "card_count": 48,
+      "assets_path": "oracles_assets/ORACLE_NJ",
+      "themes": ["TRAVAIL", "SPIRITUEL"],
+      "tone": "puissant, direct, sans filtre",
+      "card_format": {
+        "type": "image",
+        "extension": "png",
+        "naming_convention": "card_{number}.png"
+      }
+    },
+    "ORACLE_GOSSIP_LOVE": {
+      "id": "ORACLE_GOSSIP_LOVE",
+      "name": "Gossip Love",
+      "description": "Oracle fun et moderne pour l'amour et les relations",
+      "card_count": 40,
+      "assets_path": "oracles_assets/ORACLE_GOSSIP_LOVE",
+      "themes": ["SENTIMENTAL"],
+      "tone": "fun, moderne, complice",
+      "card_format": {
+        "type": "image",
+        "extension": "png",
+        "naming_convention": "card_{number}.png"
+      }
+    },
+    "ORACLE_MYSTICA": {
+      "id": "ORACLE_MYSTICA",
+      "name": "Oracle Mystica Sentimental",
+      "description": "Oracle mystique pour l'amour et les relations - 102 cartes",
+      "card_count": 102,
+      "assets_path": "oracles_assets/ORACLE_MYSTICA/CORE",
+      "themes": ["SENTIMENTAL", "SPIRITUEL"],
+      "tone": "mystique, romantique, profond",
+      "card_format": {
+        "type": "image",
+        "extension": "png",
+        "naming_convention": "mystica_sentimental_{number}.png"
+      }
+    },
+    "ORACLE_MYSTICA_TRAVAIL": {
+      "id": "ORACLE_MYSTICA_TRAVAIL",
+      "name": "Mystica Extension Travail",
+      "description": "Extension Mystica pour le travail et la carrière",
+      "card_count": 30,
+      "assets_path": "oracles_assets/ORACLE_MYSTICA/EXTENSIONS/TRAVAIL",
+      "themes": ["TRAVAIL"],
+      "tone": "mystique, stratégique, ambitieux",
+      "parent_oracle": "ORACLE_MYSTICA_CORE",
+      "card_format": {
+        "type": "image",
+        "extension": "png",
+        "naming_convention": "card_{number}.png"
+      }
+    },
+    "ORACLE_WOOD_FAIRY": {
+      "id": "ORACLE_WOOD_FAIRY",
+      "name": "Wood Fairy",
+      "description": "Oracle féérique connecté à la nature et la spiritualité",
+      "card_count": 42,
+      "assets_path": "oracles_assets/ORACLE_WOOD_FAIRY",
+      "themes": ["SPIRITUEL"],
+      "tone": "féérique, naturel, lumineux",
+      "card_format": {
+        "type": "image",
+        "extension": "png",
+        "naming_convention": "card_{number}.png"
+      }
+    }
+  },
+  "selection_rules": {
+    "priority": "H3 > H2 > H1 > fallback",
+    "fallback_oracle": "ORACLE_MYSTICA",
+    "force_mode": {
+      "enabled": true,
+      "forced_oracle_id": "ORACLE_MYSTICA"
+    }
+  }
+}

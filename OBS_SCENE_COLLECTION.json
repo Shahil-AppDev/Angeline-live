@@ -1,0 +1,525 @@
+{
+  "current_scene": "LIVE_BASE",
+  "current_program_scene": "LIVE_BASE",
+  "current_preview_scene": "LIVE_BASE",
+  "current_transition": "Fade",
+  "transition_duration": 300,
+  "scene_order": [
+    {
+      "name": "LIVE_BASE"
+    }
+  ],
+  "name": "Angeline_Live_Mystica",
+  "sources": [
+    {
+      "versioned_id": "ffmpeg_source",
+      "name": "BG_MAIN",
+      "uuid": "bg-main-uuid-001",
+      "id": "ffmpeg_source",
+      "settings": {
+        "local_file": "C:\\Users\\DarkNode\\Desktop\\Projet Web\\Angeline-live\\assets\\oracles_assets\\ORACLE_MYSTICA\\CORE\\overlays\\bg_mystica_main.mp4",
+        "looping": true,
+        "restart_on_activate": false,
+        "clear_on_media_end": false,
+        "speed_percent": 100,
+        "color_range": 0,
+        "linear_alpha": false,
+        "seekable": true,
+        "hw_decode": true
+      },
+      "mixers": 0,
+      "sync": 0,
+      "flags": 0,
+      "volume": 0.0,
+      "balance": 0.5,
+      "monitoring_type": 0,
+      "private_settings": {}
+    },
+    {
+      "versioned_id": "dshow_input",
+      "name": "CAM",
+      "uuid": "cam-uuid-001",
+      "id": "dshow_input",
+      "settings": {
+        "video_device_id": "",
+        "res_type": 0,
+        "resolution": "1920x1080",
+        "frame_interval": 333333,
+        "video_format": 0,
+        "last_video_device_id": "",
+        "last_resolution": "1920x1080",
+        "buffering": 1
+      },
+      "mixers": 255,
+      "sync": 0,
+      "flags": 0,
+      "volume": 1.0,
+      "balance": 0.5,
+      "monitoring_type": 0,
+      "private_settings": {}
+    },
+    {
+      "versioned_id": "image_source",
+      "name": "CARD_1",
+      "uuid": "card1-uuid-001",
+      "id": "image_source",
+      "settings": {
+        "file": "C:\\Users\\DarkNode\\Desktop\\Projet Web\\Angeline-live\\assets\\oracles_assets\\ORACLE_MYSTICA\\CORE\\overlays\\card_1.png",
+        "unload": false,
+        "linear_alpha": false
+      },
+      "mixers": 0,
+      "sync": 0,
+      "flags": 0,
+      "volume": 1.0,
+      "balance": 0.5,
+      "monitoring_type": 0,
+      "private_settings": {}
+    },
+    {
+      "versioned_id": "image_source",
+      "name": "CARD_2",
+      "uuid": "card2-uuid-001",
+      "id": "image_source",
+      "settings": {
+        "file": "C:\\Users\\DarkNode\\Desktop\\Projet Web\\Angeline-live\\assets\\oracles_assets\\ORACLE_MYSTICA\\CORE\\overlays\\card_1.png",
+        "unload": false,
+        "linear_alpha": false
+      },
+      "mixers": 0,
+      "sync": 0,
+      "flags": 0,
+      "volume": 1.0,
+      "balance": 0.5,
+      "monitoring_type": 0,
+      "private_settings": {}
+    },
+    {
+      "versioned_id": "image_source",
+      "name": "CARD_3",
+      "uuid": "card3-uuid-001",
+      "id": "image_source",
+      "settings": {
+        "file": "C:\\Users\\DarkNode\\Desktop\\Projet Web\\Angeline-live\\assets\\oracles_assets\\ORACLE_MYSTICA\\CORE\\overlays\\card_1.png",
+        "unload": false,
+        "linear_alpha": false
+      },
+      "mixers": 0,
+      "sync": 0,
+      "flags": 0,
+      "volume": 1.0,
+      "balance": 0.5,
+      "monitoring_type": 0,
+      "private_settings": {}
+    },
+    {
+      "versioned_id": "text_gdiplus_v2",
+      "name": "USERNAME_TEXT",
+      "uuid": "username-uuid-001",
+      "id": "text_gdiplus_v2",
+      "settings": {
+        "text": "@username",
+        "font": {
+          "face": "Arial",
+          "flags": 1,
+          "size": 48,
+          "style": "Bold"
+        },
+        "color": 4294967295,
+        "opacity": 100,
+        "gradient": false,
+        "outline": true,
+        "outline_size": 4,
+        "outline_color": 4278190080,
+        "outline_opacity": 100,
+        "chatlog": false,
+        "extents": false,
+        "extents_wrap": true,
+        "extents_cx": 900,
+        "extents_cy": 80,
+        "align": "center",
+        "valign": "top"
+      },
+      "mixers": 0,
+      "sync": 0,
+      "flags": 0,
+      "volume": 1.0,
+      "balance": 0.5,
+      "monitoring_type": 0,
+      "private_settings": {}
+    },
+    {
+      "versioned_id": "text_gdiplus_v2",
+      "name": "QUESTION_TEXT",
+      "uuid": "question-uuid-001",
+      "id": "text_gdiplus_v2",
+      "settings": {
+        "text": "Question...",
+        "font": {
+          "face": "Arial",
+          "flags": 0,
+          "size": 36,
+          "style": "Regular"
+        },
+        "color": 4294967295,
+        "opacity": 100,
+        "gradient": false,
+        "outline": true,
+        "outline_size": 3,
+        "outline_color": 4278190080,
+        "outline_opacity": 100,
+        "chatlog": false,
+        "extents": true,
+        "extents_wrap": true,
+        "extents_cx": 1000,
+        "extents_cy": 150,
+        "align": "center",
+        "valign": "top"
+      },
+      "mixers": 0,
+      "sync": 0,
+      "flags": 0,
+      "volume": 1.0,
+      "balance": 0.5,
+      "monitoring_type": 0,
+      "private_settings": {}
+    },
+    {
+      "versioned_id": "text_gdiplus_v2",
+      "name": "ANSWER_TEXT",
+      "uuid": "answer-uuid-001",
+      "id": "text_gdiplus_v2",
+      "settings": {
+        "text": "Réponse...",
+        "font": {
+          "face": "Arial",
+          "flags": 0,
+          "size": 32,
+          "style": "Regular"
+        },
+        "color": 4294956800,
+        "opacity": 100,
+        "gradient": false,
+        "outline": true,
+        "outline_size": 3,
+        "outline_color": 4278190080,
+        "outline_opacity": 100,
+        "chatlog": false,
+        "extents": true,
+        "extents_wrap": true,
+        "extents_cx": 1000,
+        "extents_cy": 500,
+        "align": "center",
+        "valign": "top"
+      },
+      "mixers": 0,
+      "sync": 0,
+      "flags": 0,
+      "volume": 1.0,
+      "balance": 0.5,
+      "monitoring_type": 0,
+      "private_settings": {}
+    },
+    {
+      "versioned_id": "ffmpeg_source",
+      "name": "SFX_SHUFFLE",
+      "uuid": "sfx-shuffle-uuid-001",
+      "id": "ffmpeg_source",
+      "settings": {
+        "local_file": "C:\\Users\\DarkNode\\Desktop\\Projet Web\\Angeline-live\\assets\\oracles_assets\\ORACLE_MYSTICA\\CORE\\sfx\\shuffle.mp3",
+        "looping": false,
+        "restart_on_activate": true,
+        "clear_on_media_end": false,
+        "speed_percent": 100,
+        "is_local_file": true
+      },
+      "mixers": 255,
+      "sync": 0,
+      "flags": 0,
+      "volume": 0.5,
+      "balance": 0.5,
+      "monitoring_type": 0,
+      "private_settings": {}
+    },
+    {
+      "versioned_id": "ffmpeg_source",
+      "name": "SFX_FLIP",
+      "uuid": "sfx-flip-uuid-001",
+      "id": "ffmpeg_source",
+      "settings": {
+        "local_file": "C:\\Users\\DarkNode\\Desktop\\Projet Web\\Angeline-live\\assets\\oracles_assets\\ORACLE_MYSTICA\\CORE\\sfx\\flip.mp3",
+        "looping": false,
+        "restart_on_activate": true,
+        "clear_on_media_end": false,
+        "speed_percent": 100,
+        "is_local_file": true
+      },
+      "mixers": 255,
+      "sync": 0,
+      "flags": 0,
+      "volume": 0.5,
+      "balance": 0.5,
+      "monitoring_type": 0,
+      "private_settings": {}
+    }
+  ],
+  "scenes": [
+    {
+      "name": "LIVE_BASE",
+      "uuid": "scene-live-base-uuid-001",
+      "id": 1,
+      "settings": {},
+      "flags": 0,
+      "volume": 1.0,
+      "balance": 0.5,
+      "monitoring_type": 0,
+      "private_settings": {},
+      "items": [
+        {
+          "name": "BG_MAIN",
+          "source_uuid": "bg-main-uuid-001",
+          "id": 1,
+          "visible": true,
+          "locked": false,
+          "pos": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "rot": 0.0,
+          "alignment": 5,
+          "bounds_type": 0,
+          "bounds_alignment": 0,
+          "bounds": {
+            "x": 1080.0,
+            "y": 1920.0
+          },
+          "crop_left": 0,
+          "crop_top": 0,
+          "crop_right": 0,
+          "crop_bottom": 0,
+          "blend_method": "default",
+          "blend_type": "normal"
+        },
+        {
+          "name": "CAM",
+          "source_uuid": "cam-uuid-001",
+          "id": 2,
+          "visible": true,
+          "locked": false,
+          "pos": {
+            "x": 0.0,
+            "y": 400.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "rot": 0.0,
+          "alignment": 5,
+          "bounds_type": 0,
+          "bounds_alignment": 0,
+          "bounds": {
+            "x": 1080.0,
+            "y": 1080.0
+          },
+          "crop_left": 0,
+          "crop_top": 0,
+          "crop_right": 0,
+          "crop_bottom": 0,
+          "blend_method": "default",
+          "blend_type": "normal"
+        },
+        {
+          "name": "USERNAME_TEXT",
+          "source_uuid": "username-uuid-001",
+          "id": 3,
+          "visible": false,
+          "locked": false,
+          "pos": {
+            "x": 90.0,
+            "y": 100.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "rot": 0.0,
+          "alignment": 5,
+          "bounds_type": 0,
+          "bounds_alignment": 0,
+          "bounds": {
+            "x": 900.0,
+            "y": 80.0
+          },
+          "crop_left": 0,
+          "crop_top": 0,
+          "crop_right": 0,
+          "crop_bottom": 0,
+          "blend_method": "default",
+          "blend_type": "normal"
+        },
+        {
+          "name": "QUESTION_TEXT",
+          "source_uuid": "question-uuid-001",
+          "id": 4,
+          "visible": false,
+          "locked": false,
+          "pos": {
+            "x": 40.0,
+            "y": 200.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "rot": 0.0,
+          "alignment": 5,
+          "bounds_type": 0,
+          "bounds_alignment": 0,
+          "bounds": {
+            "x": 1000.0,
+            "y": 150.0
+          },
+          "crop_left": 0,
+          "crop_top": 0,
+          "crop_right": 0,
+          "crop_bottom": 0,
+          "blend_method": "default",
+          "blend_type": "normal"
+        },
+        {
+          "name": "CARD_1",
+          "source_uuid": "card1-uuid-001",
+          "id": 5,
+          "visible": false,
+          "locked": false,
+          "pos": {
+            "x": 100.0,
+            "y": 800.0
+          },
+          "scale": {
+            "x": 0.244140625,
+            "y": 0.26041666666666663
+          },
+          "rot": 0.0,
+          "alignment": 5,
+          "bounds_type": 0,
+          "bounds_alignment": 0,
+          "bounds": {
+            "x": 250.0,
+            "y": 400.0
+          },
+          "crop_left": 0,
+          "crop_top": 0,
+          "crop_right": 0,
+          "crop_bottom": 0,
+          "blend_method": "default",
+          "blend_type": "normal"
+        },
+        {
+          "name": "CARD_2",
+          "source_uuid": "card2-uuid-001",
+          "id": 6,
+          "visible": false,
+          "locked": false,
+          "pos": {
+            "x": 415.0,
+            "y": 750.0
+          },
+          "scale": {
+            "x": 0.244140625,
+            "y": 0.26041666666666663
+          },
+          "rot": 0.0,
+          "alignment": 5,
+          "bounds_type": 0,
+          "bounds_alignment": 0,
+          "bounds": {
+            "x": 250.0,
+            "y": 400.0
+          },
+          "crop_left": 0,
+          "crop_top": 0,
+          "crop_right": 0,
+          "crop_bottom": 0,
+          "blend_method": "default",
+          "blend_type": "normal"
+        },
+        {
+          "name": "CARD_3",
+          "source_uuid": "card3-uuid-001",
+          "id": 7,
+          "visible": false,
+          "locked": false,
+          "pos": {
+            "x": 730.0,
+            "y": 800.0
+          },
+          "scale": {
+            "x": 0.244140625,
+            "y": 0.26041666666666663
+          },
+          "rot": 0.0,
+          "alignment": 5,
+          "bounds_type": 0,
+          "bounds_alignment": 0,
+          "bounds": {
+            "x": 250.0,
+            "y": 400.0
+          },
+          "crop_left": 0,
+          "crop_top": 0,
+          "crop_right": 0,
+          "crop_bottom": 0,
+          "blend_method": "default",
+          "blend_type": "normal"
+        },
+        {
+          "name": "ANSWER_TEXT",
+          "source_uuid": "answer-uuid-001",
+          "id": 8,
+          "visible": false,
+          "locked": false,
+          "pos": {
+            "x": 40.0,
+            "y": 1300.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "rot": 0.0,
+          "alignment": 5,
+          "bounds_type": 0,
+          "bounds_alignment": 0,
+          "bounds": {
+            "x": 1000.0,
+            "y": 500.0
+          },
+          "crop_left": 0,
+          "crop_top": 0,
+          "crop_right": 0,
+          "crop_bottom": 0,
+          "blend_method": "default",
+          "blend_type": "normal"
+        }
+      ]
+    }
+  ],
+  "transitions": [
+    {
+      "name": "Fade",
+      "id": "fade_transition",
+      "settings": {}
+    },
+    {
+      "name": "Cut",
+      "id": "cut_transition",
+      "settings": {}
+    }
+  ]
+}

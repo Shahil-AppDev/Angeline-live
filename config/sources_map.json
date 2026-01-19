@@ -1,0 +1,280 @@
+{
+  "version": "1.0.0",
+  "description": "Mapping des sources OBS WebSocket v5 pour Angeline NJ Live",
+  "obs_config": {
+    "scene_name": "LIVE_BASE",
+    "video_format": "9:16",
+    "resolution": {
+      "width": 1080,
+      "height": 1920
+    }
+  },
+  "sources": {
+    "BG_LOOP": {
+      "type": "ffmpeg_source",
+      "name": "BG_LOOP",
+      "description": "Background animé en boucle",
+      "settings": {
+        "looping": true,
+        "restart_on_activate": false,
+        "clear_on_media_end": false
+      },
+      "position": {
+        "x": 0,
+        "y": 0,
+        "width": 1080,
+        "height": 1920
+      },
+      "z_index": 0,
+      "asset_path_key": "visuals.backgrounds"
+    },
+    "CAM": {
+      "type": "dshow_input",
+      "name": "CAM",
+      "description": "Caméra principale (table + mains)",
+      "settings": {
+        "video_device_id": "auto"
+      },
+      "position": {
+        "x": 0,
+        "y": 400,
+        "width": 1080,
+        "height": 1080
+      },
+      "z_index": 1
+    },
+    "CARD1": {
+      "type": "image_source",
+      "name": "CARD1",
+      "description": "Carte 1 (gauche)",
+      "settings": {
+        "file": "",
+        "unload": false
+      },
+      "position": {
+        "x": 100,
+        "y": 800,
+        "width": 250,
+        "height": 400
+      },
+      "z_index": 10,
+      "dynamic": true,
+      "asset_path_key": "oracle.cards"
+    },
+    "CARD2": {
+      "type": "image_source",
+      "name": "CARD2",
+      "description": "Carte 2 (centre)",
+      "settings": {
+        "file": "",
+        "unload": false
+      },
+      "position": {
+        "x": 415,
+        "y": 750,
+        "width": 250,
+        "height": 400
+      },
+      "z_index": 11,
+      "dynamic": true,
+      "asset_path_key": "oracle.cards"
+    },
+    "CARD3": {
+      "type": "image_source",
+      "name": "CARD3",
+      "description": "Carte 3 (droite)",
+      "settings": {
+        "file": "",
+        "unload": false
+      },
+      "position": {
+        "x": 730,
+        "y": 800,
+        "width": 250,
+        "height": 400
+      },
+      "z_index": 12,
+      "dynamic": true,
+      "asset_path_key": "oracle.cards"
+    },
+    "USERNAME_TEXT": {
+      "type": "text_gdiplus_v2",
+      "name": "USERNAME_TEXT",
+      "description": "Nom de l'utilisateur TikTok",
+      "settings": {
+        "text": "",
+        "font": {
+          "face": "Arial",
+          "size": 48,
+          "style": "Bold"
+        },
+        "color": "#FFFFFFFF",
+        "opacity": 100,
+        "outline": true,
+        "outline_size": 4,
+        "outline_color": "#FF000000",
+        "align": "center",
+        "valign": "top"
+      },
+      "position": {
+        "x": 540,
+        "y": 100,
+        "width": 900,
+        "height": 80
+      },
+      "z_index": 20,
+      "dynamic": true
+    },
+    "QUESTION_TEXT": {
+      "type": "text_gdiplus_v2",
+      "name": "QUESTION_TEXT",
+      "description": "Question posée par l'utilisateur",
+      "settings": {
+        "text": "",
+        "font": {
+          "face": "Arial",
+          "size": 36,
+          "style": "Regular"
+        },
+        "color": "#FFFFFFFF",
+        "opacity": 100,
+        "outline": true,
+        "outline_size": 3,
+        "outline_color": "#FF000000",
+        "align": "center",
+        "valign": "top",
+        "wrap": true
+      },
+      "position": {
+        "x": 540,
+        "y": 200,
+        "width": 1000,
+        "height": 150
+      },
+      "z_index": 21,
+      "dynamic": true
+    },
+    "ANSWER_TEXT": {
+      "type": "text_gdiplus_v2",
+      "name": "ANSWER_TEXT",
+      "description": "Réponse de l'IA",
+      "settings": {
+        "text": "",
+        "font": {
+          "face": "Arial",
+          "size": 32,
+          "style": "Regular"
+        },
+        "color": "#FFFFD700",
+        "opacity": 100,
+        "outline": true,
+        "outline_size": 3,
+        "outline_color": "#FF000000",
+        "align": "center",
+        "valign": "top",
+        "wrap": true
+      },
+      "position": {
+        "x": 540,
+        "y": 1300,
+        "width": 1000,
+        "height": 500
+      },
+      "z_index": 22,
+      "dynamic": true
+    },
+    "SFX_SHUFFLE": {
+      "type": "ffmpeg_source",
+      "name": "SFX_SHUFFLE",
+      "description": "Son de mélange des cartes",
+      "settings": {
+        "looping": false,
+        "restart_on_activate": true,
+        "is_local_file": true
+      },
+      "audio_only": true,
+      "z_index": -1,
+      "dynamic": true,
+      "asset_path_key": "audio.shuffle"
+    },
+    "SFX_FLIP": {
+      "type": "ffmpeg_source",
+      "name": "SFX_FLIP",
+      "description": "Son de retournement de carte",
+      "settings": {
+        "looping": false,
+        "restart_on_activate": true,
+        "is_local_file": true
+      },
+      "audio_only": true,
+      "z_index": -1,
+      "dynamic": true,
+      "asset_path_key": "audio.flip"
+    }
+  },
+  "animations": {
+    "card_reveal": {
+      "duration_ms": 800,
+      "easing": "ease-out",
+      "steps": [
+        {
+          "delay_ms": 0,
+          "action": "play_sound",
+          "source": "SFX_FLIP"
+        },
+        {
+          "delay_ms": 100,
+          "action": "scale",
+          "from": 0.8,
+          "to": 1.0
+        },
+        {
+          "delay_ms": 100,
+          "action": "opacity",
+          "from": 0,
+          "to": 100
+        }
+      ]
+    },
+    "text_fade_in": {
+      "duration_ms": 500,
+      "easing": "ease-in",
+      "steps": [
+        {
+          "delay_ms": 0,
+          "action": "opacity",
+          "from": 0,
+          "to": 100
+        }
+      ]
+    }
+  },
+  "presets": {
+    "idle": {
+      "description": "État d'attente entre les tirages",
+      "sources_visibility": {
+        "BG_LOOP": true,
+        "CAM": true,
+        "CARD1": false,
+        "CARD2": false,
+        "CARD3": false,
+        "USERNAME_TEXT": false,
+        "QUESTION_TEXT": false,
+        "ANSWER_TEXT": false
+      }
+    },
+    "reading_active": {
+      "description": "Tirage en cours",
+      "sources_visibility": {
+        "BG_LOOP": true,
+        "CAM": true,
+        "CARD1": true,
+        "CARD2": true,
+        "CARD3": true,
+        "USERNAME_TEXT": true,
+        "QUESTION_TEXT": true,
+        "ANSWER_TEXT": true
+      }
+    }
+  }
+}

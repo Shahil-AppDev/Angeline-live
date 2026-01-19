@@ -1,0 +1,22 @@
+{
+  "name": "angeline-live-automation",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:web": "npm run dev --workspace=apps/web-admin",
+    "dev:core": "npm run dev --workspace=apps/live-core",
+    "dev": "concurrently \"npm run dev:web\" \"npm run dev:core\"",
+    "build": "npm run build --workspaces",
+    "lint": "npm run lint --workspaces",
+    "create-user": "node scripts/create-user.js"
+  },
+  "devDependencies": {
+    "@types/ws": "^8.18.1",
+    "concurrently": "^8.2.2",
+    "typescript": "^5.3.3"
+  }
+}

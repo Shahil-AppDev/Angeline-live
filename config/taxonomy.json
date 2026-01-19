@@ -1,0 +1,199 @@
+{
+  "version": "1.0.0",
+  "description": "Taxonomie des intentions pour le système Angeline NJ Live",
+  "hierarchy": {
+    "H0": {
+      "label": "Meta / Commandes Live",
+      "description": "Commandes système et méta-interactions",
+      "intents": [
+        {
+          "id": "H0_START_LIVE",
+          "keywords": ["commence", "start", "démarre", "go live"],
+          "action": "START_LIVE"
+        },
+        {
+          "id": "H0_STOP_LIVE",
+          "keywords": ["stop", "arrête", "termine", "fin"],
+          "action": "STOP_LIVE"
+        },
+        {
+          "id": "H0_HELLO",
+          "keywords": ["salut", "bonjour", "coucou", "hey", "hello"],
+          "action": "GREETING"
+        },
+        {
+          "id": "H0_THANKS",
+          "keywords": ["merci", "thanks", "gratitude"],
+          "action": "ACKNOWLEDGMENT"
+        },
+        {
+          "id": "H0_INFO",
+          "keywords": ["comment ça marche", "c'est quoi", "info", "explique"],
+          "action": "EXPLAIN_SYSTEM"
+        }
+      ]
+    },
+    "H1": {
+      "label": "Oracle Général",
+      "description": "Demande générale sans axe spécifique",
+      "intents": [
+        {
+          "id": "H1_GENERAL_READING",
+          "keywords": ["tire moi les cartes", "oracle", "guidance", "conseil général"],
+          "oracle_preference": "ORACLE_STANDARD",
+          "axes": []
+        }
+      ]
+    },
+    "H2": {
+      "label": "Axes Thématiques",
+      "description": "Catégories principales de questions",
+      "axes": {
+        "SENTIMENTAL": {
+          "label": "Amour & Relations",
+          "keywords": ["amour", "relation", "couple", "crush", "ex", "cœur", "sentiment", "rencontre", "âme sœur"],
+          "oracle_mapping": {
+            "primary": "ORACLE_GOSSIP_LOVE",
+            "secondary": ["ORACLE_MYSTICA/EXTENSIONS/SENTIMENTAL", "ORACLE_ALENA"]
+          },
+          "H3_intents": [
+            {
+              "id": "H3_LOVE_NEW_ENCOUNTER",
+              "keywords": ["nouvelle rencontre", "vais-je rencontrer", "quand vais-je trouver"],
+              "oracle": "ORACLE_GOSSIP_LOVE"
+            },
+            {
+              "id": "H3_LOVE_CURRENT_RELATIONSHIP",
+              "keywords": ["mon couple", "ma relation", "avec mon copain", "avec ma copine"],
+              "oracle": "ORACLE_MYSTICA/EXTENSIONS/SENTIMENTAL"
+            },
+            {
+              "id": "H3_LOVE_EX_RETURN",
+              "keywords": ["mon ex", "va-t-il revenir", "retour ex"],
+              "oracle": "ORACLE_GOSSIP_LOVE"
+            },
+            {
+              "id": "H3_LOVE_CRUSH",
+              "keywords": ["crush", "personne que j'aime", "il/elle m'aime"],
+              "oracle": "ORACLE_ALENA"
+            },
+            {
+              "id": "H3_LOVE_BREAKUP",
+              "keywords": ["rupture", "séparation", "divorce"],
+              "oracle": "ORACLE_MYSTICA/EXTENSIONS/SENTIMENTAL"
+            }
+          ]
+        },
+        "TRAVAIL": {
+          "label": "Travail & Carrière",
+          "keywords": ["travail", "job", "carrière", "emploi", "boulot", "patron", "collègue", "entretien", "promotion"],
+          "oracle_mapping": {
+            "primary": "ORACLE_MYSTICA/EXTENSIONS/TRAVAIL",
+            "secondary": ["ORACLE_NJ", "ORACLE_STANDARD"]
+          },
+          "H3_intents": [
+            {
+              "id": "H3_WORK_JOB_SEARCH",
+              "keywords": ["trouver un travail", "cherche emploi", "entretien"],
+              "oracle": "ORACLE_MYSTICA/EXTENSIONS/TRAVAIL"
+            },
+            {
+              "id": "H3_WORK_PROMOTION",
+              "keywords": ["promotion", "augmentation", "évolution"],
+              "oracle": "ORACLE_NJ"
+            },
+            {
+              "id": "H3_WORK_CONFLICT",
+              "keywords": ["conflit au travail", "patron", "collègue toxique"],
+              "oracle": "ORACLE_MYSTICA/EXTENSIONS/TRAVAIL"
+            },
+            {
+              "id": "H3_WORK_PROJECT",
+              "keywords": ["projet professionnel", "lancer mon business", "entreprise"],
+              "oracle": "ORACLE_NJ"
+            },
+            {
+              "id": "H3_WORK_CHANGE",
+              "keywords": ["changer de travail", "reconversion", "démission"],
+              "oracle": "ORACLE_MYSTICA/EXTENSIONS/TRAVAIL"
+            }
+          ]
+        },
+        "FAMILLE": {
+          "label": "Famille & Proches",
+          "keywords": ["famille", "maman", "papa", "frère", "sœur", "enfant", "parent", "familial"],
+          "oracle_mapping": {
+            "primary": "ORACLE_NJ_FAMILY",
+            "secondary": ["ORACLE_ALENA", "ORACLE_STANDARD"]
+          },
+          "H3_intents": [
+            {
+              "id": "H3_FAMILY_CONFLICT",
+              "keywords": ["conflit familial", "dispute", "brouille"],
+              "oracle": "ORACLE_NJ_FAMILY"
+            },
+            {
+              "id": "H3_FAMILY_PARENT",
+              "keywords": ["mes parents", "ma mère", "mon père"],
+              "oracle": "ORACLE_NJ_FAMILY"
+            },
+            {
+              "id": "H3_FAMILY_SIBLING",
+              "keywords": ["mon frère", "ma sœur", "fratrie"],
+              "oracle": "ORACLE_NJ_FAMILY"
+            },
+            {
+              "id": "H3_FAMILY_CHILD",
+              "keywords": ["mon enfant", "mes enfants", "maternité", "paternité"],
+              "oracle": "ORACLE_ALENA"
+            },
+            {
+              "id": "H3_FAMILY_RECONCILIATION",
+              "keywords": ["réconciliation", "pardon", "renouer"],
+              "oracle": "ORACLE_NJ_FAMILY"
+            }
+          ]
+        },
+        "SPIRITUEL": {
+          "label": "Spiritualité & Développement Personnel",
+          "keywords": ["spirituel", "éveil", "énergie", "chakra", "méditation", "guidance", "chemin de vie", "mission"],
+          "oracle_mapping": {
+            "primary": "ORACLE_WOOD_FAIRY",
+            "secondary": ["ORACLE_MYSTICA/CORE", "ORACLE_NJ"]
+          },
+          "H3_intents": [
+            {
+              "id": "H3_SPIRITUAL_PATH",
+              "keywords": ["chemin de vie", "mission", "destinée"],
+              "oracle": "ORACLE_WOOD_FAIRY"
+            },
+            {
+              "id": "H3_SPIRITUAL_ENERGY",
+              "keywords": ["énergie", "vibration", "aura"],
+              "oracle": "ORACLE_MYSTICA/CORE"
+            },
+            {
+              "id": "H3_SPIRITUAL_AWAKENING",
+              "keywords": ["éveil", "conscience", "transformation"],
+              "oracle": "ORACLE_WOOD_FAIRY"
+            },
+            {
+              "id": "H3_SPIRITUAL_PROTECTION",
+              "keywords": ["protection", "mauvais œil", "énergies négatives"],
+              "oracle": "ORACLE_MYSTICA/CORE"
+            },
+            {
+              "id": "H3_SPIRITUAL_GUIDANCE",
+              "keywords": ["guidance", "message", "signe"],
+              "oracle": "ORACLE_WOOD_FAIRY"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "fallback": {
+    "default_oracle": "ORACLE_STANDARD",
+    "default_intent": "H1_GENERAL_READING"
+  }
+}

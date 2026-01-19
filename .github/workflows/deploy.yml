@@ -1,0 +1,107 @@
+name: Deploy to Hetzner VPS
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy to Production
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build packages in dependency order
+        run: |
+          npm run build --workspace=packages/shared
+          npm run build --workspace=packages/intents
+          npm run build --workspace=packages/llm
+          npm run build --workspace=packages/obs-render
+          npm run build --workspace=packages/oracle-system
+          npm run build --workspace=packages/tikfinity-bridge
+          npm run build --workspace=packages/elevenlabs-tts
+
+      - name: Build web-admin
+        run: |
+          cd apps/web-admin
+          npm run build
+
+      - name: Build live-core
+        run: |
+          cd apps/live-core
+          npm run build
+
+      - name: Deploy to VPS
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USERNAME }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          port: ${{ secrets.VPS_PORT }}
+          script: |
+            cd /var/www/angeline-live
+
+            echo "🔄 Pulling latest code..."
+            git fetch origin
+            git reset --hard origin/master
+
+            echo "📦 Installing dependencies..."
+            npm install
+
+            echo "🔨 Building packages..."
+            npm run build --workspaces
+
+            echo "🔨 Building web-admin..."
+            cd apps/web-admin
+            npm run build
+            cd ../..
+
+            echo "🔨 Building live-core..."
+            cd apps/live-core
+            npm run build
+            cd ../..
+
+            echo "♻️  Restarting PM2..."
+            pm2 restart ecosystem.config.js
+
+            echo "✅ Deployment completed!"
+            pm2 status
+
+      - name: Verify deployment
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USERNAME }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          port: ${{ secrets.VPS_PORT }}
+          script: |
+            echo "🔍 Checking PM2 status..."
+            pm2 status
+
+            echo "🔍 Checking Nginx..."
+            systemctl is-active nginx
+
+            echo "🔍 Testing API health..."
+            curl -s https://live.angeline-nj.xyz/api/health
+
+      - name: Notify deployment status
+        if: always()
+        run: |
+          if [ "${{ job.status }}" == "success" ]; then
+            echo "✅ Deployment successful!"
+          else
+            echo "❌ Deployment failed!"
+          fi
