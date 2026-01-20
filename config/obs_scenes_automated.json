@@ -1,0 +1,662 @@
+{
+  "obs_version": "30.0.0",
+  "scene_collection_name": "Angeline Live - Automated Oracle System",
+  "canvas": {
+    "width": 1080,
+    "height": 1920,
+    "fps_num": 30,
+    "fps_den": 1
+  },
+  "scenes": [
+    {
+      "name": "LIVE_MAIN",
+      "description": "Scène principale de live avec oracle actif",
+      "sources": [
+        {
+          "name": "BG_LOOP",
+          "type": "ffmpeg_source",
+          "settings": {
+            "local_file": "C:/Users/Utilisateur/Documents/Angeline-live-main/assets/visuals/backgrounds/BG_LOOP.mp4",
+            "looping": true,
+            "restart_on_activate": false,
+            "clear_on_media_end": false,
+            "hw_decode": true,
+            "speed_percent": 100
+          },
+          "transform": {
+            "pos": { "x": 0, "y": 0 },
+            "scale": { "x": 1.0, "y": 1.0 },
+            "rot": 0,
+            "alignment": 5,
+            "bounds_type": 0,
+            "bounds_alignment": 0,
+            "bounds": { "x": 1080, "y": 1920 }
+          },
+          "visible": true,
+          "locked": true,
+          "z_index": 0
+        },
+        {
+          "name": "CAM_MAIN",
+          "type": "dshow_input",
+          "settings": {
+            "video_device_id": "Votre Webcam",
+            "res_type": 1,
+            "resolution": "1920x1080",
+            "frame_interval": 333333,
+            "video_format": 0,
+            "color_space": 0,
+            "color_range": 0,
+            "buffering": 1
+          },
+          "transform": {
+            "pos": { "x": 0, "y": 400 },
+            "scale": { "x": 0.5625, "y": 0.5625 },
+            "rot": 0,
+            "alignment": 5,
+            "bounds_type": 0,
+            "bounds_alignment": 0,
+            "bounds": { "x": 1080, "y": 1080 }
+          },
+          "visible": true,
+          "locked": false,
+          "z_index": 1,
+          "filters": [
+            {
+              "name": "Color Correction",
+              "type": "color_filter",
+              "enabled": true,
+              "settings": {
+                "brightness": 0.0,
+                "contrast": 0.0,
+                "gamma": 0.0,
+                "saturation": 1.0,
+                "hue_shift": 0.0,
+                "opacity": 1.0
+              }
+            },
+            {
+              "name": "Chroma Key",
+              "type": "chroma_key_filter_v2",
+              "enabled": false,
+              "settings": {
+                "key_color_type": "green",
+                "similarity": 400,
+                "smoothness": 80,
+                "spill": 100
+              }
+            }
+          ]
+        },
+        {
+          "name": "ORACLE_CARD_1",
+          "type": "image_source",
+          "settings": {
+            "file": "C:/Users/Utilisateur/Documents/Angeline-live-main/assets/oracles_assets/ORACLE_MYSTICA/CORE/1.jpeg",
+            "unload": false
+          },
+          "transform": {
+            "pos": { "x": 100, "y": 800 },
+            "scale": { "x": 1.0, "y": 1.0 },
+            "rot": 0,
+            "alignment": 5,
+            "bounds_type": 0,
+            "bounds_alignment": 0,
+            "bounds": { "x": 250, "y": 400 }
+          },
+          "visible": true,
+          "locked": false,
+          "z_index": 10
+        },
+        {
+          "name": "ORACLE_CARD_2",
+          "type": "image_source",
+          "settings": {
+            "file": "C:/Users/Utilisateur/Documents/Angeline-live-main/assets/oracles_assets/ORACLE_MYSTICA/CORE/2.jpeg",
+            "unload": false
+          },
+          "transform": {
+            "pos": { "x": 415, "y": 750 },
+            "scale": { "x": 1.0, "y": 1.0 },
+            "rot": 0,
+            "alignment": 5,
+            "bounds_type": 0,
+            "bounds_alignment": 0,
+            "bounds": { "x": 250, "y": 400 }
+          },
+          "visible": true,
+          "locked": false,
+          "z_index": 11
+        },
+        {
+          "name": "ORACLE_CARD_3",
+          "type": "image_source",
+          "settings": {
+            "file": "C:/Users/Utilisateur/Documents/Angeline-live-main/assets/oracles_assets/ORACLE_MYSTICA/CORE/3.jpeg",
+            "unload": false
+          },
+          "transform": {
+            "pos": { "x": 730, "y": 800 },
+            "scale": { "x": 1.0, "y": 1.0 },
+            "rot": 0,
+            "alignment": 5,
+            "bounds_type": 0,
+            "bounds_alignment": 0,
+            "bounds": { "x": 250, "y": 400 }
+          },
+          "visible": true,
+          "locked": false,
+          "z_index": 12
+        },
+        {
+          "name": "TXT_USERNAME",
+          "type": "text_gdiplus_v2",
+          "settings": {
+            "text": "@username",
+            "font": {
+              "face": "Arial",
+              "flags": 1,
+              "size": 48,
+              "style": "Bold"
+            },
+            "color": 4294967295,
+            "opacity": 100,
+            "outline": true,
+            "outline_size": 4,
+            "outline_color": 4278190080,
+            "outline_opacity": 100,
+            "gradient": false,
+            "align": "center",
+            "valign": "top",
+            "vertical": false,
+            "extents": true,
+            "extents_wrap": true,
+            "extents_cx": 900,
+            "extents_cy": 80
+          },
+          "transform": {
+            "pos": { "x": 90, "y": 100 },
+            "scale": { "x": 1.0, "y": 1.0 },
+            "rot": 0,
+            "alignment": 5,
+            "bounds_type": 0,
+            "bounds_alignment": 0,
+            "bounds": { "x": 900, "y": 80 }
+          },
+          "visible": true,
+          "locked": false,
+          "z_index": 20
+        },
+        {
+          "name": "TXT_QUESTION",
+          "type": "text_gdiplus_v2",
+          "settings": {
+            "text": "Question de l'utilisateur",
+            "font": {
+              "face": "Arial",
+              "flags": 0,
+              "size": 36,
+              "style": "Regular"
+            },
+            "color": 4294967295,
+            "opacity": 100,
+            "outline": true,
+            "outline_size": 3,
+            "outline_color": 4278190080,
+            "outline_opacity": 100,
+            "gradient": false,
+            "align": "center",
+            "valign": "top",
+            "vertical": false,
+            "extents": true,
+            "extents_wrap": true,
+            "extents_cx": 1000,
+            "extents_cy": 150
+          },
+          "transform": {
+            "pos": { "x": 40, "y": 200 },
+            "scale": { "x": 1.0, "y": 1.0 },
+            "rot": 0,
+            "alignment": 5,
+            "bounds_type": 0,
+            "bounds_alignment": 0,
+            "bounds": { "x": 1000, "y": 150 }
+          },
+          "visible": true,
+          "locked": false,
+          "z_index": 21
+        },
+        {
+          "name": "TXT_RESPONSE",
+          "type": "text_gdiplus_v2",
+          "settings": {
+            "text": "Réponse de l'oracle...",
+            "font": {
+              "face": "Arial",
+              "flags": 0,
+              "size": 32,
+              "style": "Regular"
+            },
+            "color": 4294956800,
+            "opacity": 100,
+            "outline": true,
+            "outline_size": 3,
+            "outline_color": 4278190080,
+            "outline_opacity": 100,
+            "gradient": false,
+            "align": "center",
+            "valign": "top",
+            "vertical": false,
+            "extents": true,
+            "extents_wrap": true,
+            "extents_cx": 1000,
+            "extents_cy": 500
+          },
+          "transform": {
+            "pos": { "x": 40, "y": 1300 },
+            "scale": { "x": 1.0, "y": 1.0 },
+            "rot": 0,
+            "alignment": 5,
+            "bounds_type": 0,
+            "bounds_alignment": 0,
+            "bounds": { "x": 1000, "y": 500 }
+          },
+          "visible": true,
+          "locked": false,
+          "z_index": 22
+        },
+        {
+          "name": "FX_SMOKE",
+          "type": "ffmpeg_source",
+          "settings": {
+            "local_file": "C:/Users/Utilisateur/Documents/Angeline-live-main/assets/visuals/effects/FX_SMOKE.mp4",
+            "looping": false,
+            "restart_on_activate": true,
+            "clear_on_media_end": false,
+            "hw_decode": true
+          },
+          "transform": {
+            "pos": { "x": 0, "y": 0 },
+            "scale": { "x": 1.0, "y": 1.0 },
+            "rot": 0,
+            "alignment": 5,
+            "bounds_type": 0,
+            "bounds_alignment": 0,
+            "bounds": { "x": 1080, "y": 1920 }
+          },
+          "visible": false,
+          "locked": false,
+          "z_index": 15
+        }
+      ]
+    },
+    {
+      "name": "IDLE",
+      "description": "Scène d'attente entre les tirages",
+      "sources": [
+        {
+          "name": "BG_LOOP",
+          "type": "ffmpeg_source",
+          "settings": {
+            "local_file": "C:/Users/Utilisateur/Documents/Angeline-live-main/assets/visuals/backgrounds/BG_LOOP.mp4",
+            "looping": true,
+            "restart_on_activate": false,
+            "clear_on_media_end": false,
+            "hw_decode": true
+          },
+          "transform": {
+            "pos": { "x": 0, "y": 0 },
+            "scale": { "x": 1.0, "y": 1.0 },
+            "rot": 0,
+            "alignment": 5,
+            "bounds_type": 0,
+            "bounds_alignment": 0,
+            "bounds": { "x": 1080, "y": 1920 }
+          },
+          "visible": true,
+          "locked": true,
+          "z_index": 0
+        },
+        {
+          "name": "CAM_IDLE",
+          "type": "dshow_input",
+          "settings": {
+            "video_device_id": "Votre Webcam",
+            "res_type": 1,
+            "resolution": "1920x1080",
+            "frame_interval": 333333,
+            "video_format": 0,
+            "color_space": 0,
+            "color_range": 0,
+            "buffering": 1
+          },
+          "transform": {
+            "pos": { "x": 0, "y": 400 },
+            "scale": { "x": 0.5625, "y": 0.5625 },
+            "rot": 0,
+            "alignment": 5,
+            "bounds_type": 0,
+            "bounds_alignment": 0,
+            "bounds": { "x": 1080, "y": 1080 }
+          },
+          "visible": true,
+          "locked": false,
+          "z_index": 1
+        },
+        {
+          "name": "TXT_IDLE_MESSAGE",
+          "type": "text_gdiplus_v2",
+          "settings": {
+            "text": "En attente de votre question...",
+            "font": {
+              "face": "Arial",
+              "flags": 1,
+              "size": 42,
+              "style": "Bold"
+            },
+            "color": 4294967295,
+            "opacity": 100,
+            "outline": true,
+            "outline_size": 4,
+            "outline_color": 4278190080,
+            "outline_opacity": 100,
+            "gradient": false,
+            "align": "center",
+            "valign": "center",
+            "vertical": false,
+            "extents": true,
+            "extents_wrap": true,
+            "extents_cx": 900,
+            "extents_cy": 100
+          },
+          "transform": {
+            "pos": { "x": 90, "y": 1400 },
+            "scale": { "x": 1.0, "y": 1.0 },
+            "rot": 0,
+            "alignment": 5,
+            "bounds_type": 0,
+            "bounds_alignment": 0,
+            "bounds": { "x": 900, "y": 100 }
+          },
+          "visible": true,
+          "locked": false,
+          "z_index": 10
+        }
+      ]
+    },
+    {
+      "name": "REACTIONS_AUTO",
+      "description": "Scène avec animations et réactions automatiques",
+      "sources": [
+        {
+          "name": "BG_LOOP",
+          "type": "ffmpeg_source",
+          "settings": {
+            "local_file": "C:/Users/Utilisateur/Documents/Angeline-live-main/assets/visuals/backgrounds/BG_LOOP.mp4",
+            "looping": true,
+            "restart_on_activate": false,
+            "clear_on_media_end": false,
+            "hw_decode": true
+          },
+          "transform": {
+            "pos": { "x": 0, "y": 0 },
+            "scale": { "x": 1.0, "y": 1.0 },
+            "rot": 0,
+            "alignment": 5,
+            "bounds_type": 0,
+            "bounds_alignment": 0,
+            "bounds": { "x": 1080, "y": 1920 }
+          },
+          "visible": true,
+          "locked": true,
+          "z_index": 0
+        },
+        {
+          "name": "CAM_REACTIONS",
+          "type": "dshow_input",
+          "settings": {
+            "video_device_id": "Votre Webcam",
+            "res_type": 1,
+            "resolution": "1920x1080",
+            "frame_interval": 333333,
+            "video_format": 0,
+            "color_space": 0,
+            "color_range": 0,
+            "buffering": 1
+          },
+          "transform": {
+            "pos": { "x": 0, "y": 400 },
+            "scale": { "x": 0.5625, "y": 0.5625 },
+            "rot": 0,
+            "alignment": 5,
+            "bounds_type": 0,
+            "bounds_alignment": 0,
+            "bounds": { "x": 1080, "y": 1080 }
+          },
+          "visible": true,
+          "locked": false,
+          "z_index": 1
+        },
+        {
+          "name": "FX_SMOKE_REVEAL",
+          "type": "ffmpeg_source",
+          "settings": {
+            "local_file": "C:/Users/Utilisateur/Documents/Angeline-live-main/assets/visuals/effects/FX_SMOKE.mp4",
+            "looping": false,
+            "restart_on_activate": true,
+            "clear_on_media_end": true,
+            "hw_decode": true
+          },
+          "transform": {
+            "pos": { "x": 0, "y": 0 },
+            "scale": { "x": 1.0, "y": 1.0 },
+            "rot": 0,
+            "alignment": 5,
+            "bounds_type": 0,
+            "bounds_alignment": 0,
+            "bounds": { "x": 1080, "y": 1920 }
+          },
+          "visible": true,
+          "locked": false,
+          "z_index": 15
+        },
+        {
+          "name": "ORACLE_CARD_REVEAL_1",
+          "type": "image_source",
+          "settings": {
+            "file": "C:/Users/Utilisateur/Documents/Angeline-live-main/assets/oracles_assets/ORACLE_MYSTICA/CORE/1.jpeg",
+            "unload": false
+          },
+          "transform": {
+            "pos": { "x": 100, "y": 800 },
+            "scale": { "x": 0.8, "y": 0.8 },
+            "rot": 0,
+            "alignment": 5,
+            "bounds_type": 0,
+            "bounds_alignment": 0,
+            "bounds": { "x": 250, "y": 400 }
+          },
+          "visible": true,
+          "locked": false,
+          "z_index": 10
+        },
+        {
+          "name": "ORACLE_CARD_REVEAL_2",
+          "type": "image_source",
+          "settings": {
+            "file": "C:/Users/Utilisateur/Documents/Angeline-live-main/assets/oracles_assets/ORACLE_MYSTICA/CORE/2.jpeg",
+            "unload": false
+          },
+          "transform": {
+            "pos": { "x": 415, "y": 750 },
+            "scale": { "x": 0.8, "y": 0.8 },
+            "rot": 0,
+            "alignment": 5,
+            "bounds_type": 0,
+            "bounds_alignment": 0,
+            "bounds": { "x": 250, "y": 400 }
+          },
+          "visible": true,
+          "locked": false,
+          "z_index": 11
+        },
+        {
+          "name": "ORACLE_CARD_REVEAL_3",
+          "type": "image_source",
+          "settings": {
+            "file": "C:/Users/Utilisateur/Documents/Angeline-live-main/assets/oracles_assets/ORACLE_MYSTICA/CORE/3.jpeg",
+            "unload": false
+          },
+          "transform": {
+            "pos": { "x": 730, "y": 800 },
+            "scale": { "x": 0.8, "y": 0.8 },
+            "rot": 0,
+            "alignment": 5,
+            "bounds_type": 0,
+            "bounds_alignment": 0,
+            "bounds": { "x": 250, "y": 400 }
+          },
+          "visible": true,
+          "locked": false,
+          "z_index": 12
+        },
+        {
+          "name": "TXT_REACTION",
+          "type": "text_gdiplus_v2",
+          "settings": {
+            "text": "✨ Révélation en cours... ✨",
+            "font": {
+              "face": "Arial",
+              "flags": 1,
+              "size": 44,
+              "style": "Bold"
+            },
+            "color": 4294956800,
+            "opacity": 100,
+            "outline": true,
+            "outline_size": 4,
+            "outline_color": 4278190080,
+            "outline_opacity": 100,
+            "gradient": true,
+            "gradient_color": 4294967295,
+            "gradient_dir": 90,
+            "gradient_opacity": 100,
+            "align": "center",
+            "valign": "center",
+            "vertical": false,
+            "extents": true,
+            "extents_wrap": true,
+            "extents_cx": 900,
+            "extents_cy": 100
+          },
+          "transform": {
+            "pos": { "x": 90, "y": 150 },
+            "scale": { "x": 1.0, "y": 1.0 },
+            "rot": 0,
+            "alignment": 5,
+            "bounds_type": 0,
+            "bounds_alignment": 0,
+            "bounds": { "x": 900, "y": 100 }
+          },
+          "visible": true,
+          "locked": false,
+          "z_index": 20
+        }
+      ]
+    },
+    {
+      "name": "TRANSITIONS",
+      "description": "Scène de transition entre états",
+      "sources": [
+        {
+          "name": "FX_TRANSITION_SMOKE",
+          "type": "ffmpeg_source",
+          "settings": {
+            "local_file": "C:/Users/Utilisateur/Documents/Angeline-live-main/assets/visuals/effects/FX_SMOKE.mp4",
+            "looping": false,
+            "restart_on_activate": true,
+            "clear_on_media_end": true,
+            "hw_decode": true,
+            "speed_percent": 100
+          },
+          "transform": {
+            "pos": { "x": 0, "y": 0 },
+            "scale": { "x": 1.0, "y": 1.0 },
+            "rot": 0,
+            "alignment": 5,
+            "bounds_type": 0,
+            "bounds_alignment": 0,
+            "bounds": { "x": 1080, "y": 1920 }
+          },
+          "visible": true,
+          "locked": false,
+          "z_index": 0
+        },
+        {
+          "name": "BG_TRANSITION",
+          "type": "ffmpeg_source",
+          "settings": {
+            "local_file": "C:/Users/Utilisateur/Documents/Angeline-live-main/assets/visuals/backgrounds/BG_LOOP.mp4",
+            "looping": true,
+            "restart_on_activate": false,
+            "clear_on_media_end": false,
+            "hw_decode": true
+          },
+          "transform": {
+            "pos": { "x": 0, "y": 0 },
+            "scale": { "x": 1.0, "y": 1.0 },
+            "rot": 0,
+            "alignment": 5,
+            "bounds_type": 0,
+            "bounds_alignment": 0,
+            "bounds": { "x": 1080, "y": 1920 }
+          },
+          "visible": true,
+          "locked": true,
+          "z_index": -1,
+          "filters": [
+            {
+              "name": "Opacity Fade",
+              "type": "opacity_filter",
+              "enabled": true,
+              "settings": {
+                "opacity": 0.5
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "automation_notes": {
+    "description": "Configuration OBS automatisée générée pour Angeline Live Oracle System",
+    "assets_detected": {
+      "backgrounds": ["BG_LOOP.mp4"],
+      "effects": ["FX_SMOKE.mp4"],
+      "oracle_cards": {
+        "CORE": 42,
+        "SENTIMENTAL": 27,
+        "TRAVAIL": 17
+      }
+    },
+    "scenes_purpose": {
+      "LIVE_MAIN": "Scène principale avec oracle actif, cartes visibles, textes dynamiques",
+      "IDLE": "Scène d'attente neutre avec message d'invitation",
+      "REACTIONS_AUTO": "Scène avec effets de révélation automatiques et animations",
+      "TRANSITIONS": "Scène de transition fluide entre états"
+    },
+    "z_layer_hierarchy": {
+      "0": "Background (locked)",
+      "1": "Camera",
+      "10-12": "Oracle cards",
+      "15": "Visual effects (smoke)",
+      "20-22": "Text overlays (top layer)"
+    },
+    "performance_optimizations": {
+      "hw_decode": "Enabled for all video sources",
+      "looping": "Background loops without restart",
+      "effects": "One-shot playback with auto-clear",
+      "resolution": "Native 1080x1920 (9:16 TikTok format)"
+    }
+  }
+}
