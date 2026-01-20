@@ -10,7 +10,7 @@
           "name": "BG_LOOP",
           "type": "ffmpeg_source",
           "settings": {
-            "local_file": "C:/Users/Utilisateur/Documents/Angeline-live-main/assets/backgrounds/mystic_loop.mp4",
+            "local_file": "C:/Users/Utilisateur/Documents/Angeline-live-20260120-213706/assets/backgrounds/mystic_loop.mp4",
             "looping": true,
             "restart_on_activate": false,
             "clear_on_media_end": false,
@@ -70,7 +70,7 @@
           "name": "CARD_1",
           "type": "image_source",
           "settings": {
-            "file": "C:/Users/Utilisateur/Documents/Angeline-live-main/assets/oracle/cards/back.png",
+            "file": "C:/Users/Utilisateur/Documents/Angeline-live-20260120-213706/assets/oracle/cards/back.png",
             "unload": false
           },
           "transform": {
@@ -89,7 +89,7 @@
           "name": "CARD_2",
           "type": "image_source",
           "settings": {
-            "file": "C:/Users/Utilisateur/Documents/Angeline-live-main/assets/oracle/cards/back.png",
+            "file": "C:/Users/Utilisateur/Documents/Angeline-live-20260120-213706/assets/oracle/cards/back.png",
             "unload": false
           },
           "transform": {
@@ -108,7 +108,7 @@
           "name": "CARD_3",
           "type": "image_source",
           "settings": {
-            "file": "C:/Users/Utilisateur/Documents/Angeline-live-main/assets/oracle/cards/back.png",
+            "file": "C:/Users/Utilisateur/Documents/Angeline-live-20260120-213706/assets/oracle/cards/back.png",
             "unload": false
           },
           "transform": {
@@ -241,7 +241,7 @@
           "name": "FX_SMOKE",
           "type": "ffmpeg_source",
           "settings": {
-            "local_file": "C:/Users/Utilisateur/Documents/Angeline-live-main/assets/effects/smoke_alpha.webm",
+            "local_file": "C:/Users/Utilisateur/Documents/Angeline-live-20260120-213706/assets/effects/smoke_alpha.webm",
             "looping": false,
             "restart_on_activate": true,
             "clear_on_media_end": false,
@@ -263,7 +263,7 @@
           "name": "SFX_SHUFFLE",
           "type": "ffmpeg_source",
           "settings": {
-            "local_file": "C:/Users/Utilisateur/Documents/Angeline-live-main/assets/audio/shuffle.mp3",
+            "local_file": "C:/Users/Utilisateur/Documents/Angeline-live-20260120-213706/assets/audio/shuffle.mp3",
             "looping": false,
             "restart_on_activate": true,
             "is_local_file": true
@@ -276,7 +276,7 @@
           "name": "SFX_FLIP",
           "type": "ffmpeg_source",
           "settings": {
-            "local_file": "C:/Users/Utilisateur/Documents/Angeline-live-main/assets/audio/card_flip.mp3",
+            "local_file": "C:/Users/Utilisateur/Documents/Angeline-live-20260120-213706/assets/audio/card_flip.mp3",
             "looping": false,
             "restart_on_activate": true,
             "is_local_file": true
@@ -289,7 +289,7 @@
           "name": "SFX_POOF",
           "type": "ffmpeg_source",
           "settings": {
-            "local_file": "C:/Users/Utilisateur/Documents/Angeline-live-main/assets/audio/magic_poof.mp3",
+            "local_file": "C:/Users/Utilisateur/Documents/Angeline-live-20260120-213706/assets/audio/magic_poof.mp3",
             "looping": false,
             "restart_on_activate": true,
             "is_local_file": true
@@ -308,7 +308,7 @@
           "name": "BG_LOOP",
           "type": "ffmpeg_source",
           "settings": {
-            "local_file": "C:/Users/Utilisateur/Documents/Angeline-live-main/assets/backgrounds/mystic_loop.mp4",
+            "local_file": "C:/Users/Utilisateur/Documents/Angeline-live-20260120-213706/assets/backgrounds/mystic_loop.mp4",
             "looping": true,
             "restart_on_activate": false,
             "clear_on_media_end": false,
@@ -355,7 +355,7 @@
           "name": "CARD_1",
           "type": "image_source",
           "settings": {
-            "file": "C:/Users/Utilisateur/Documents/Angeline-live-main/assets/oracle/cards/back.png",
+            "file": "C:/Users/Utilisateur/Documents/Angeline-live-20260120-213706/assets/oracle/cards/back.png",
             "unload": false
           },
           "transform": {
@@ -374,7 +374,7 @@
           "name": "CARD_2",
           "type": "image_source",
           "settings": {
-            "file": "C:/Users/Utilisateur/Documents/Angeline-live-main/assets/oracle/cards/back.png",
+            "file": "C:/Users/Utilisateur/Documents/Angeline-live-20260120-213706/assets/oracle/cards/back.png",
             "unload": false
           },
           "transform": {
@@ -393,7 +393,7 @@
           "name": "CARD_3",
           "type": "image_source",
           "settings": {
-            "file": "C:/Users/Utilisateur/Documents/Angeline-live-main/assets/oracle/cards/back.png",
+            "file": "C:/Users/Utilisateur/Documents/Angeline-live-20260120-213706/assets/oracle/cards/back.png",
             "unload": false
           },
           "transform": {
@@ -526,7 +526,7 @@
           "name": "FX_SMOKE",
           "type": "ffmpeg_source",
           "settings": {
-            "local_file": "C:/Users/Utilisateur/Documents/Angeline-live-main/assets/effects/smoke_alpha.webm",
+            "local_file": "C:/Users/Utilisateur/Documents/Angeline-live-20260120-213706/assets/effects/smoke_alpha.webm",
             "looping": false,
             "restart_on_activate": true,
             "clear_on_media_end": false,
@@ -548,7 +548,7 @@
           "name": "SFX_SHUFFLE",
           "type": "ffmpeg_source",
           "settings": {
-            "local_file": "C:/Users/Utilisateur/Documents/Angeline-live-main/assets/audio/shuffle.mp3",
+            "local_file": "C:/Users/Utilisateur/Documents/Angeline-live-20260120-213706/assets/audio/shuffle.mp3",
             "looping": false,
             "restart_on_activate": true,
             "is_local_file": true
@@ -561,7 +561,7 @@
           "name": "SFX_FLIP",
           "type": "ffmpeg_source",
           "settings": {
-            "local_file": "C:/Users/Utilisateur/Documents/Angeline-live-main/assets/audio/card_flip.mp3",
+            "local_file": "C:/Users/Utilisateur/Documents/Angeline-live-20260120-213706/assets/audio/card_flip.mp3",
             "looping": false,
             "restart_on_activate": true,
             "is_local_file": true
@@ -574,7 +574,7 @@
           "name": "SFX_POOF",
           "type": "ffmpeg_source",
           "settings": {
-            "local_file": "C:/Users/Utilisateur/Documents/Angeline-live-main/assets/audio/magic_poof.mp3",
+            "local_file": "C:/Users/Utilisateur/Documents/Angeline-live-20260120-213706/assets/audio/magic_poof.mp3",
             "looping": false,
             "restart_on_activate": true,
             "is_local_file": true
@@ -595,12 +595,12 @@
   "notes": {
     "installation": "Ce fichier peut être importé dans OBS Studio via Scene Collection > Import",
     "assets_required": [
-      "C:/Users/Utilisateur/Documents/Angeline-live-main/assets/backgrounds/mystic_loop.mp4",
-      "C:/Users/Utilisateur/Documents/Angeline-live-main/assets/oracle/cards/back.png",
-      "C:/Users/Utilisateur/Documents/Angeline-live-main/assets/effects/smoke_alpha.webm",
-      "C:/Users/Utilisateur/Documents/Angeline-live-main/assets/audio/shuffle.mp3",
-      "C:/Users/Utilisateur/Documents/Angeline-live-main/assets/audio/card_flip.mp3",
-      "C:/Users/Utilisateur/Documents/Angeline-live-main/assets/audio/magic_poof.mp3"
+      "C:/Users/Utilisateur/Documents/Angeline-live-20260120-213706/assets/backgrounds/mystic_loop.mp4",
+      "C:/Users/Utilisateur/Documents/Angeline-live-20260120-213706/assets/oracle/cards/back.png",
+      "C:/Users/Utilisateur/Documents/Angeline-live-20260120-213706/assets/effects/smoke_alpha.webm",
+      "C:/Users/Utilisateur/Documents/Angeline-live-20260120-213706/assets/audio/shuffle.mp3",
+      "C:/Users/Utilisateur/Documents/Angeline-live-20260120-213706/assets/audio/card_flip.mp3",
+      "C:/Users/Utilisateur/Documents/Angeline-live-20260120-213706/assets/audio/magic_poof.mp3"
     ],
     "webcam_setup": "Remplacer 'Votre Webcam' par le nom exact de votre périphérique vidéo",
     "resolution": "Format vertical 9:16 (1080x1920) optimisé pour TikTok Live",

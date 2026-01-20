@@ -16,7 +16,7 @@
           "name": "BG_LOOP",
           "type": "ffmpeg_source",
           "settings": {
-            "local_file": "C:/Users/Utilisateur/Documents/Angeline-live-main/assets/visuals/backgrounds/BG_LOOP.mp4",
+            "local_file": "C:/Users/Utilisateur/Documents/Angeline-live-20260120-213706/assets/visuals/backgrounds/BG_LOOP.mp4",
             "looping": true,
             "restart_on_activate": false,
             "clear_on_media_end": false,
@@ -92,7 +92,7 @@
           "name": "ORACLE_CARD_1",
           "type": "image_source",
           "settings": {
-            "file": "C:/Users/Utilisateur/Documents/Angeline-live-main/assets/oracles_assets/ORACLE_MYSTICA/CORE/1.jpeg",
+            "file": "C:/Users/Utilisateur/Documents/Angeline-live-20260120-213706/assets/oracles_assets/ORACLE_MYSTICA/CORE/1.jpeg",
             "unload": false
           },
           "transform": {
@@ -112,7 +112,7 @@
           "name": "ORACLE_CARD_2",
           "type": "image_source",
           "settings": {
-            "file": "C:/Users/Utilisateur/Documents/Angeline-live-main/assets/oracles_assets/ORACLE_MYSTICA/CORE/2.jpeg",
+            "file": "C:/Users/Utilisateur/Documents/Angeline-live-20260120-213706/assets/oracles_assets/ORACLE_MYSTICA/CORE/2.jpeg",
             "unload": false
           },
           "transform": {
@@ -132,7 +132,7 @@
           "name": "ORACLE_CARD_3",
           "type": "image_source",
           "settings": {
-            "file": "C:/Users/Utilisateur/Documents/Angeline-live-main/assets/oracles_assets/ORACLE_MYSTICA/CORE/3.jpeg",
+            "file": "C:/Users/Utilisateur/Documents/Angeline-live-20260120-213706/assets/oracles_assets/ORACLE_MYSTICA/CORE/3.jpeg",
             "unload": false
           },
           "transform": {
@@ -269,7 +269,7 @@
           "name": "FX_SMOKE",
           "type": "ffmpeg_source",
           "settings": {
-            "local_file": "C:/Users/Utilisateur/Documents/Angeline-live-main/assets/visuals/effects/FX_SMOKE.mp4",
+            "local_file": "C:/Users/Utilisateur/Documents/Angeline-live-20260120-213706/assets/visuals/effects/FX_SMOKE.mp4",
             "looping": false,
             "restart_on_activate": true,
             "clear_on_media_end": false,
@@ -298,7 +298,7 @@
           "name": "BG_LOOP",
           "type": "ffmpeg_source",
           "settings": {
-            "local_file": "C:/Users/Utilisateur/Documents/Angeline-live-main/assets/visuals/backgrounds/BG_LOOP.mp4",
+            "local_file": "C:/Users/Utilisateur/Documents/Angeline-live-20260120-213706/assets/visuals/backgrounds/BG_LOOP.mp4",
             "looping": true,
             "restart_on_activate": false,
             "clear_on_media_end": false,
@@ -392,7 +392,7 @@
           "name": "BG_LOOP",
           "type": "ffmpeg_source",
           "settings": {
-            "local_file": "C:/Users/Utilisateur/Documents/Angeline-live-main/assets/visuals/backgrounds/BG_LOOP.mp4",
+            "local_file": "C:/Users/Utilisateur/Documents/Angeline-live-20260120-213706/assets/visuals/backgrounds/BG_LOOP.mp4",
             "looping": true,
             "restart_on_activate": false,
             "clear_on_media_end": false,
@@ -441,7 +441,7 @@
           "name": "FX_SMOKE_REVEAL",
           "type": "ffmpeg_source",
           "settings": {
-            "local_file": "C:/Users/Utilisateur/Documents/Angeline-live-main/assets/visuals/effects/FX_SMOKE.mp4",
+            "local_file": "C:/Users/Utilisateur/Documents/Angeline-live-20260120-213706/assets/visuals/effects/FX_SMOKE.mp4",
             "looping": false,
             "restart_on_activate": true,
             "clear_on_media_end": true,
@@ -464,7 +464,7 @@
           "name": "ORACLE_CARD_REVEAL_1",
           "type": "image_source",
           "settings": {
-            "file": "C:/Users/Utilisateur/Documents/Angeline-live-main/assets/oracles_assets/ORACLE_MYSTICA/CORE/1.jpeg",
+            "file": "C:/Users/Utilisateur/Documents/Angeline-live-20260120-213706/assets/oracles_assets/ORACLE_MYSTICA/CORE/1.jpeg",
             "unload": false
           },
           "transform": {
@@ -484,7 +484,7 @@
           "name": "ORACLE_CARD_REVEAL_2",
           "type": "image_source",
           "settings": {
-            "file": "C:/Users/Utilisateur/Documents/Angeline-live-main/assets/oracles_assets/ORACLE_MYSTICA/CORE/2.jpeg",
+            "file": "C:/Users/Utilisateur/Documents/Angeline-live-20260120-213706/assets/oracles_assets/ORACLE_MYSTICA/CORE/2.jpeg",
             "unload": false
           },
           "transform": {
@@ -504,7 +504,7 @@
           "name": "ORACLE_CARD_REVEAL_3",
           "type": "image_source",
           "settings": {
-            "file": "C:/Users/Utilisateur/Documents/Angeline-live-main/assets/oracles_assets/ORACLE_MYSTICA/CORE/3.jpeg",
+            "file": "C:/Users/Utilisateur/Documents/Angeline-live-20260120-213706/assets/oracles_assets/ORACLE_MYSTICA/CORE/3.jpeg",
             "unload": false
           },
           "transform": {
@@ -572,7 +572,7 @@
           "name": "FX_TRANSITION_SMOKE",
           "type": "ffmpeg_source",
           "settings": {
-            "local_file": "C:/Users/Utilisateur/Documents/Angeline-live-main/assets/visuals/effects/FX_SMOKE.mp4",
+            "local_file": "C:/Users/Utilisateur/Documents/Angeline-live-20260120-213706/assets/visuals/effects/FX_SMOKE.mp4",
             "looping": false,
             "restart_on_activate": true,
             "clear_on_media_end": true,
@@ -596,7 +596,7 @@
           "name": "BG_TRANSITION",
           "type": "ffmpeg_source",
           "settings": {
-            "local_file": "C:/Users/Utilisateur/Documents/Angeline-live-main/assets/visuals/backgrounds/BG_LOOP.mp4",
+            "local_file": "C:/Users/Utilisateur/Documents/Angeline-live-20260120-213706/assets/visuals/backgrounds/BG_LOOP.mp4",
             "looping": true,
             "restart_on_activate": false,
             "clear_on_media_end": false,
