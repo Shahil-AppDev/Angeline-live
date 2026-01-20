@@ -1,9 +1,9 @@
-name: Deploy to Hetzner VPS
+name: Deploy Angeline Live to VPS
 
 on:
   push:
     branches:
-      - master
+      - main
   workflow_dispatch:
 
 jobs:
@@ -14,35 +14,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-          cache: "npm"
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build packages in dependency order
-        run: |
-          npm run build --workspace=packages/shared
-          npm run build --workspace=packages/intents
-          npm run build --workspace=packages/llm
-          npm run build --workspace=packages/obs-render
-          npm run build --workspace=packages/oracle-system
-          npm run build --workspace=packages/tikfinity-bridge
-          npm run build --workspace=packages/elevenlabs-tts
-
-      - name: Build web-admin
-        run: |
-          cd apps/web-admin
-          npm run build
-
-      - name: Build live-core
-        run: |
-          cd apps/live-core
-          npm run build
 
       - name: Deploy to VPS
         uses: appleboy/ssh-action@v1.0.0
@@ -56,12 +27,17 @@ jobs:
 
             echo "🔄 Pulling latest code..."
             git fetch origin
-            git reset --hard origin/master
+            git reset --hard origin/main
 
             echo "📦 Installing dependencies..."
             npm install
 
-            echo "🔨 Building packages..."
+            echo "� Creating config symlink..."
+            cd apps
+            ln -sf ../config config
+            cd ..
+
+            echo "�🔨 Building packages..."
             npm run build --workspaces
 
             echo "🔨 Building web-admin..."
@@ -74,8 +50,12 @@ jobs:
             npm run build
             cd ../..
 
-            echo "♻️  Restarting PM2..."
-            pm2 restart ecosystem.config.js
+            echo "♻️  Restarting PM2 services..."
+            pm2 restart angeline-live-core
+            pm2 restart angeline-web-admin
+
+            echo "💾 Saving PM2 configuration..."
+            pm2 save
 
             echo "✅ Deployment completed!"
             pm2 status
