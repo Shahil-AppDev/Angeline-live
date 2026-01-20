@@ -1,0 +1,612 @@
+{
+  "obs_version": "30.0.0",
+  "scene_collection_name": "Angeline Live - Oracle",
+  "scenes": [
+    {
+      "name": "IDLE",
+      "description": "Scène d'attente entre les tirages",
+      "sources": [
+        {
+          "name": "BG_LOOP",
+          "type": "ffmpeg_source",
+          "settings": {
+            "local_file": "C:/OBS_Assets/backgrounds/mystic_loop.mp4",
+            "looping": true,
+            "restart_on_activate": false,
+            "clear_on_media_end": false,
+            "hw_decode": true
+          },
+          "transform": {
+            "pos": { "x": 0, "y": 0 },
+            "scale": { "x": 1.0, "y": 1.0 },
+            "rot": 0,
+            "alignment": 5,
+            "bounds_type": 0,
+            "bounds_alignment": 0,
+            "bounds": { "x": 1080, "y": 1920 }
+          },
+          "visible": true,
+          "locked": false
+        },
+        {
+          "name": "CAM",
+          "type": "dshow_input",
+          "settings": {
+            "video_device_id": "Votre Webcam",
+            "res_type": 1,
+            "resolution": "1920x1080",
+            "frame_interval": 333333,
+            "video_format": 0,
+            "color_space": 0,
+            "color_range": 0,
+            "buffering": 1
+          },
+          "transform": {
+            "pos": { "x": 0, "y": 400 },
+            "scale": { "x": 0.5625, "y": 0.5625 },
+            "rot": 0,
+            "alignment": 5,
+            "bounds_type": 0,
+            "bounds_alignment": 0,
+            "bounds": { "x": 1080, "y": 1080 }
+          },
+          "visible": true,
+          "locked": false,
+          "filters": [
+            {
+              "name": "Chroma Key",
+              "type": "chroma_key_filter_v2",
+              "enabled": false,
+              "settings": {
+                "key_color_type": "green",
+                "similarity": 400,
+                "smoothness": 80,
+                "spill": 100
+              }
+            }
+          ]
+        },
+        {
+          "name": "CARD_1",
+          "type": "image_source",
+          "settings": {
+            "file": "C:/OBS_Assets/oracle/cards/back.png",
+            "unload": false
+          },
+          "transform": {
+            "pos": { "x": 100, "y": 800 },
+            "scale": { "x": 1.0, "y": 1.0 },
+            "rot": 0,
+            "alignment": 5,
+            "bounds_type": 0,
+            "bounds_alignment": 0,
+            "bounds": { "x": 250, "y": 400 }
+          },
+          "visible": false,
+          "locked": false
+        },
+        {
+          "name": "CARD_2",
+          "type": "image_source",
+          "settings": {
+            "file": "C:/OBS_Assets/oracle/cards/back.png",
+            "unload": false
+          },
+          "transform": {
+            "pos": { "x": 415, "y": 750 },
+            "scale": { "x": 1.0, "y": 1.0 },
+            "rot": 0,
+            "alignment": 5,
+            "bounds_type": 0,
+            "bounds_alignment": 0,
+            "bounds": { "x": 250, "y": 400 }
+          },
+          "visible": false,
+          "locked": false
+        },
+        {
+          "name": "CARD_3",
+          "type": "image_source",
+          "settings": {
+            "file": "C:/OBS_Assets/oracle/cards/back.png",
+            "unload": false
+          },
+          "transform": {
+            "pos": { "x": 730, "y": 800 },
+            "scale": { "x": 1.0, "y": 1.0 },
+            "rot": 0,
+            "alignment": 5,
+            "bounds_type": 0,
+            "bounds_alignment": 0,
+            "bounds": { "x": 250, "y": 400 }
+          },
+          "visible": false,
+          "locked": false
+        },
+        {
+          "name": "TXT_USERNAME",
+          "type": "text_gdiplus_v2",
+          "settings": {
+            "text": "",
+            "font": {
+              "face": "Arial",
+              "flags": 1,
+              "size": 48,
+              "style": "Bold"
+            },
+            "color": 4294967295,
+            "opacity": 100,
+            "outline": true,
+            "outline_size": 4,
+            "outline_color": 4278190080,
+            "outline_opacity": 100,
+            "gradient": false,
+            "align": "center",
+            "valign": "top",
+            "vertical": false,
+            "extents": true,
+            "extents_wrap": true,
+            "extents_cx": 900,
+            "extents_cy": 80
+          },
+          "transform": {
+            "pos": { "x": 90, "y": 100 },
+            "scale": { "x": 1.0, "y": 1.0 },
+            "rot": 0,
+            "alignment": 5,
+            "bounds_type": 0,
+            "bounds_alignment": 0,
+            "bounds": { "x": 900, "y": 80 }
+          },
+          "visible": false,
+          "locked": false
+        },
+        {
+          "name": "TXT_QUESTION",
+          "type": "text_gdiplus_v2",
+          "settings": {
+            "text": "",
+            "font": {
+              "face": "Arial",
+              "flags": 0,
+              "size": 36,
+              "style": "Regular"
+            },
+            "color": 4294967295,
+            "opacity": 100,
+            "outline": true,
+            "outline_size": 3,
+            "outline_color": 4278190080,
+            "outline_opacity": 100,
+            "gradient": false,
+            "align": "center",
+            "valign": "top",
+            "vertical": false,
+            "extents": true,
+            "extents_wrap": true,
+            "extents_cx": 1000,
+            "extents_cy": 150
+          },
+          "transform": {
+            "pos": { "x": 40, "y": 200 },
+            "scale": { "x": 1.0, "y": 1.0 },
+            "rot": 0,
+            "alignment": 5,
+            "bounds_type": 0,
+            "bounds_alignment": 0,
+            "bounds": { "x": 1000, "y": 150 }
+          },
+          "visible": false,
+          "locked": false
+        },
+        {
+          "name": "TXT_RESPONSE",
+          "type": "text_gdiplus_v2",
+          "settings": {
+            "text": "",
+            "font": {
+              "face": "Arial",
+              "flags": 0,
+              "size": 32,
+              "style": "Regular"
+            },
+            "color": 4294956800,
+            "opacity": 100,
+            "outline": true,
+            "outline_size": 3,
+            "outline_color": 4278190080,
+            "outline_opacity": 100,
+            "gradient": false,
+            "align": "center",
+            "valign": "top",
+            "vertical": false,
+            "extents": true,
+            "extents_wrap": true,
+            "extents_cx": 1000,
+            "extents_cy": 500
+          },
+          "transform": {
+            "pos": { "x": 40, "y": 1300 },
+            "scale": { "x": 1.0, "y": 1.0 },
+            "rot": 0,
+            "alignment": 5,
+            "bounds_type": 0,
+            "bounds_alignment": 0,
+            "bounds": { "x": 1000, "y": 500 }
+          },
+          "visible": false,
+          "locked": false
+        },
+        {
+          "name": "FX_SMOKE",
+          "type": "ffmpeg_source",
+          "settings": {
+            "local_file": "C:/OBS_Assets/effects/smoke_alpha.webm",
+            "looping": false,
+            "restart_on_activate": true,
+            "clear_on_media_end": false,
+            "hw_decode": true
+          },
+          "transform": {
+            "pos": { "x": 0, "y": 0 },
+            "scale": { "x": 1.0, "y": 1.0 },
+            "rot": 0,
+            "alignment": 5,
+            "bounds_type": 0,
+            "bounds_alignment": 0,
+            "bounds": { "x": 1080, "y": 1920 }
+          },
+          "visible": false,
+          "locked": false
+        },
+        {
+          "name": "SFX_SHUFFLE",
+          "type": "ffmpeg_source",
+          "settings": {
+            "local_file": "C:/OBS_Assets/audio/shuffle.mp3",
+            "looping": false,
+            "restart_on_activate": true,
+            "is_local_file": true
+          },
+          "visible": false,
+          "locked": false,
+          "audio_only": true
+        },
+        {
+          "name": "SFX_FLIP",
+          "type": "ffmpeg_source",
+          "settings": {
+            "local_file": "C:/OBS_Assets/audio/card_flip.mp3",
+            "looping": false,
+            "restart_on_activate": true,
+            "is_local_file": true
+          },
+          "visible": false,
+          "locked": false,
+          "audio_only": true
+        },
+        {
+          "name": "SFX_POOF",
+          "type": "ffmpeg_source",
+          "settings": {
+            "local_file": "C:/OBS_Assets/audio/magic_poof.mp3",
+            "looping": false,
+            "restart_on_activate": true,
+            "is_local_file": true
+          },
+          "visible": false,
+          "locked": false,
+          "audio_only": true
+        }
+      ]
+    },
+    {
+      "name": "READING_ACTIVE",
+      "description": "Scène de tirage actif",
+      "sources": [
+        {
+          "name": "BG_LOOP",
+          "type": "ffmpeg_source",
+          "settings": {
+            "local_file": "C:/OBS_Assets/backgrounds/mystic_loop.mp4",
+            "looping": true,
+            "restart_on_activate": false,
+            "clear_on_media_end": false,
+            "hw_decode": true
+          },
+          "transform": {
+            "pos": { "x": 0, "y": 0 },
+            "scale": { "x": 1.0, "y": 1.0 },
+            "rot": 0,
+            "alignment": 5,
+            "bounds_type": 0,
+            "bounds_alignment": 0,
+            "bounds": { "x": 1080, "y": 1920 }
+          },
+          "visible": true,
+          "locked": false
+        },
+        {
+          "name": "CAM",
+          "type": "dshow_input",
+          "settings": {
+            "video_device_id": "Votre Webcam",
+            "res_type": 1,
+            "resolution": "1920x1080",
+            "frame_interval": 333333,
+            "video_format": 0,
+            "color_space": 0,
+            "color_range": 0,
+            "buffering": 1
+          },
+          "transform": {
+            "pos": { "x": 0, "y": 400 },
+            "scale": { "x": 0.5625, "y": 0.5625 },
+            "rot": 0,
+            "alignment": 5,
+            "bounds_type": 0,
+            "bounds_alignment": 0,
+            "bounds": { "x": 1080, "y": 1080 }
+          },
+          "visible": true,
+          "locked": false
+        },
+        {
+          "name": "CARD_1",
+          "type": "image_source",
+          "settings": {
+            "file": "C:/OBS_Assets/oracle/cards/back.png",
+            "unload": false
+          },
+          "transform": {
+            "pos": { "x": 100, "y": 800 },
+            "scale": { "x": 1.0, "y": 1.0 },
+            "rot": 0,
+            "alignment": 5,
+            "bounds_type": 0,
+            "bounds_alignment": 0,
+            "bounds": { "x": 250, "y": 400 }
+          },
+          "visible": true,
+          "locked": false
+        },
+        {
+          "name": "CARD_2",
+          "type": "image_source",
+          "settings": {
+            "file": "C:/OBS_Assets/oracle/cards/back.png",
+            "unload": false
+          },
+          "transform": {
+            "pos": { "x": 415, "y": 750 },
+            "scale": { "x": 1.0, "y": 1.0 },
+            "rot": 0,
+            "alignment": 5,
+            "bounds_type": 0,
+            "bounds_alignment": 0,
+            "bounds": { "x": 250, "y": 400 }
+          },
+          "visible": true,
+          "locked": false
+        },
+        {
+          "name": "CARD_3",
+          "type": "image_source",
+          "settings": {
+            "file": "C:/OBS_Assets/oracle/cards/back.png",
+            "unload": false
+          },
+          "transform": {
+            "pos": { "x": 730, "y": 800 },
+            "scale": { "x": 1.0, "y": 1.0 },
+            "rot": 0,
+            "alignment": 5,
+            "bounds_type": 0,
+            "bounds_alignment": 0,
+            "bounds": { "x": 250, "y": 400 }
+          },
+          "visible": true,
+          "locked": false
+        },
+        {
+          "name": "TXT_USERNAME",
+          "type": "text_gdiplus_v2",
+          "settings": {
+            "text": "@username",
+            "font": {
+              "face": "Arial",
+              "flags": 1,
+              "size": 48,
+              "style": "Bold"
+            },
+            "color": 4294967295,
+            "opacity": 100,
+            "outline": true,
+            "outline_size": 4,
+            "outline_color": 4278190080,
+            "outline_opacity": 100,
+            "gradient": false,
+            "align": "center",
+            "valign": "top",
+            "vertical": false,
+            "extents": true,
+            "extents_wrap": true,
+            "extents_cx": 900,
+            "extents_cy": 80
+          },
+          "transform": {
+            "pos": { "x": 90, "y": 100 },
+            "scale": { "x": 1.0, "y": 1.0 },
+            "rot": 0,
+            "alignment": 5,
+            "bounds_type": 0,
+            "bounds_alignment": 0,
+            "bounds": { "x": 900, "y": 80 }
+          },
+          "visible": true,
+          "locked": false
+        },
+        {
+          "name": "TXT_QUESTION",
+          "type": "text_gdiplus_v2",
+          "settings": {
+            "text": "Question de l'utilisateur",
+            "font": {
+              "face": "Arial",
+              "flags": 0,
+              "size": 36,
+              "style": "Regular"
+            },
+            "color": 4294967295,
+            "opacity": 100,
+            "outline": true,
+            "outline_size": 3,
+            "outline_color": 4278190080,
+            "outline_opacity": 100,
+            "gradient": false,
+            "align": "center",
+            "valign": "top",
+            "vertical": false,
+            "extents": true,
+            "extents_wrap": true,
+            "extents_cx": 1000,
+            "extents_cy": 150
+          },
+          "transform": {
+            "pos": { "x": 40, "y": 200 },
+            "scale": { "x": 1.0, "y": 1.0 },
+            "rot": 0,
+            "alignment": 5,
+            "bounds_type": 0,
+            "bounds_alignment": 0,
+            "bounds": { "x": 1000, "y": 150 }
+          },
+          "visible": true,
+          "locked": false
+        },
+        {
+          "name": "TXT_RESPONSE",
+          "type": "text_gdiplus_v2",
+          "settings": {
+            "text": "Réponse de l'oracle...",
+            "font": {
+              "face": "Arial",
+              "flags": 0,
+              "size": 32,
+              "style": "Regular"
+            },
+            "color": 4294956800,
+            "opacity": 100,
+            "outline": true,
+            "outline_size": 3,
+            "outline_color": 4278190080,
+            "outline_opacity": 100,
+            "gradient": false,
+            "align": "center",
+            "valign": "top",
+            "vertical": false,
+            "extents": true,
+            "extents_wrap": true,
+            "extents_cx": 1000,
+            "extents_cy": 500
+          },
+          "transform": {
+            "pos": { "x": 40, "y": 1300 },
+            "scale": { "x": 1.0, "y": 1.0 },
+            "rot": 0,
+            "alignment": 5,
+            "bounds_type": 0,
+            "bounds_alignment": 0,
+            "bounds": { "x": 1000, "y": 500 }
+          },
+          "visible": true,
+          "locked": false
+        },
+        {
+          "name": "FX_SMOKE",
+          "type": "ffmpeg_source",
+          "settings": {
+            "local_file": "C:/OBS_Assets/effects/smoke_alpha.webm",
+            "looping": false,
+            "restart_on_activate": true,
+            "clear_on_media_end": false,
+            "hw_decode": true
+          },
+          "transform": {
+            "pos": { "x": 0, "y": 0 },
+            "scale": { "x": 1.0, "y": 1.0 },
+            "rot": 0,
+            "alignment": 5,
+            "bounds_type": 0,
+            "bounds_alignment": 0,
+            "bounds": { "x": 1080, "y": 1920 }
+          },
+          "visible": false,
+          "locked": false
+        },
+        {
+          "name": "SFX_SHUFFLE",
+          "type": "ffmpeg_source",
+          "settings": {
+            "local_file": "C:/OBS_Assets/audio/shuffle.mp3",
+            "looping": false,
+            "restart_on_activate": true,
+            "is_local_file": true
+          },
+          "visible": false,
+          "locked": false,
+          "audio_only": true
+        },
+        {
+          "name": "SFX_FLIP",
+          "type": "ffmpeg_source",
+          "settings": {
+            "local_file": "C:/OBS_Assets/audio/card_flip.mp3",
+            "looping": false,
+            "restart_on_activate": true,
+            "is_local_file": true
+          },
+          "visible": false,
+          "locked": false,
+          "audio_only": true
+        },
+        {
+          "name": "SFX_POOF",
+          "type": "ffmpeg_source",
+          "settings": {
+            "local_file": "C:/OBS_Assets/audio/magic_poof.mp3",
+            "looping": false,
+            "restart_on_activate": true,
+            "is_local_file": true
+          },
+          "visible": false,
+          "locked": false,
+          "audio_only": true
+        }
+      ]
+    }
+  ],
+  "canvas": {
+    "width": 1080,
+    "height": 1920,
+    "fps_num": 30,
+    "fps_den": 1
+  },
+  "notes": {
+    "installation": "Ce fichier peut être importé dans OBS Studio via Scene Collection > Import",
+    "assets_required": [
+      "C:/OBS_Assets/backgrounds/mystic_loop.mp4",
+      "C:/OBS_Assets/oracle/cards/back.png",
+      "C:/OBS_Assets/effects/smoke_alpha.webm",
+      "C:/OBS_Assets/audio/shuffle.mp3",
+      "C:/OBS_Assets/audio/card_flip.mp3",
+      "C:/OBS_Assets/audio/magic_poof.mp3"
+    ],
+    "webcam_setup": "Remplacer 'Votre Webcam' par le nom exact de votre périphérique vidéo",
+    "resolution": "Format vertical 9:16 (1080x1920) optimisé pour TikTok Live",
+    "scenes": {
+      "IDLE": "Scène d'attente - Seuls BG_LOOP et CAM sont visibles",
+      "READING_ACTIVE": "Scène de tirage - Tous les éléments sont visibles"
+    }
+  }
+}
