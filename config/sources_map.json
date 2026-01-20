@@ -2,7 +2,8 @@
   "version": "1.0.0",
   "description": "Mapping des sources OBS WebSocket v5 pour Angeline NJ Live",
   "obs_config": {
-    "scene_name": "LIVE_BASE",
+    "scenes": ["IDLE", "READING_ACTIVE"],
+    "default_scene": "IDLE",
     "video_format": "9:16",
     "resolution": {
       "width": 1080,
@@ -43,9 +44,9 @@
       },
       "z_index": 1
     },
-    "CARD1": {
+    "CARD_1": {
       "type": "image_source",
-      "name": "CARD1",
+      "name": "CARD_1",
       "description": "Carte 1 (gauche)",
       "settings": {
         "file": "",
@@ -61,9 +62,9 @@
       "dynamic": true,
       "asset_path_key": "oracle.cards"
     },
-    "CARD2": {
+    "CARD_2": {
       "type": "image_source",
-      "name": "CARD2",
+      "name": "CARD_2",
       "description": "Carte 2 (centre)",
       "settings": {
         "file": "",
@@ -79,9 +80,9 @@
       "dynamic": true,
       "asset_path_key": "oracle.cards"
     },
-    "CARD3": {
+    "CARD_3": {
       "type": "image_source",
-      "name": "CARD3",
+      "name": "CARD_3",
       "description": "Carte 3 (droite)",
       "settings": {
         "file": "",
@@ -97,9 +98,9 @@
       "dynamic": true,
       "asset_path_key": "oracle.cards"
     },
-    "USERNAME_TEXT": {
+    "TXT_USERNAME": {
       "type": "text_gdiplus_v2",
-      "name": "USERNAME_TEXT",
+      "name": "TXT_USERNAME",
       "description": "Nom de l'utilisateur TikTok",
       "settings": {
         "text": "",
@@ -125,9 +126,9 @@
       "z_index": 20,
       "dynamic": true
     },
-    "QUESTION_TEXT": {
+    "TXT_QUESTION": {
       "type": "text_gdiplus_v2",
-      "name": "QUESTION_TEXT",
+      "name": "TXT_QUESTION",
       "description": "Question posée par l'utilisateur",
       "settings": {
         "text": "",
@@ -154,9 +155,9 @@
       "z_index": 21,
       "dynamic": true
     },
-    "ANSWER_TEXT": {
+    "TXT_RESPONSE": {
       "type": "text_gdiplus_v2",
-      "name": "ANSWER_TEXT",
+      "name": "TXT_RESPONSE",
       "description": "Réponse de l'IA",
       "settings": {
         "text": "",
@@ -210,6 +211,39 @@
       "z_index": -1,
       "dynamic": true,
       "asset_path_key": "audio.flip"
+    },
+    "SFX_POOF": {
+      "type": "ffmpeg_source",
+      "name": "SFX_POOF",
+      "description": "Son d'apparition magique",
+      "settings": {
+        "looping": false,
+        "restart_on_activate": true,
+        "is_local_file": true
+      },
+      "audio_only": true,
+      "z_index": -1,
+      "dynamic": true,
+      "asset_path_key": "audio.poof"
+    },
+    "FX_SMOKE": {
+      "type": "ffmpeg_source",
+      "name": "FX_SMOKE",
+      "description": "Effet fumée avec alpha",
+      "settings": {
+        "looping": false,
+        "restart_on_activate": true,
+        "is_local_file": true
+      },
+      "position": {
+        "x": 0,
+        "y": 0,
+        "width": 1080,
+        "height": 1920
+      },
+      "z_index": 15,
+      "dynamic": true,
+      "asset_path_key": "visuals.effects.smoke"
     }
   },
   "animations": {
@@ -255,12 +289,13 @@
       "sources_visibility": {
         "BG_LOOP": true,
         "CAM": true,
-        "CARD1": false,
-        "CARD2": false,
-        "CARD3": false,
-        "USERNAME_TEXT": false,
-        "QUESTION_TEXT": false,
-        "ANSWER_TEXT": false
+        "CARD_1": false,
+        "CARD_2": false,
+        "CARD_3": false,
+        "TXT_USERNAME": false,
+        "TXT_QUESTION": false,
+        "TXT_RESPONSE": false,
+        "FX_SMOKE": false
       }
     },
     "reading_active": {
@@ -268,12 +303,13 @@
       "sources_visibility": {
         "BG_LOOP": true,
         "CAM": true,
-        "CARD1": true,
-        "CARD2": true,
-        "CARD3": true,
-        "USERNAME_TEXT": true,
-        "QUESTION_TEXT": true,
-        "ANSWER_TEXT": true
+        "CARD_1": true,
+        "CARD_2": true,
+        "CARD_3": true,
+        "TXT_USERNAME": true,
+        "TXT_QUESTION": true,
+        "TXT_RESPONSE": true,
+        "FX_SMOKE": false
       }
     }
   }

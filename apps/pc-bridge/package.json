@@ -1,0 +1,31 @@
+{
+  "name": "@angeline-live/pc-bridge",
+  "version": "1.0.0",
+  "description": "Bridge between TikFinity/OBS (PC Windows) and VPS live-core",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "lint": "eslint src --ext .ts",
+    "simulate": "tsx src/simulate.ts"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.6.1",
+    "socket.io-client": "^4.6.1",
+    "obs-websocket-js": "^5.0.3",
+    "ws": "^8.16.0",
+    "dotenv": "^16.4.1",
+    "winston": "^3.11.0",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.11.5",
+    "@types/ws": "^8.5.10",
+    "@types/jsonwebtoken": "^9.0.5",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  }
+}

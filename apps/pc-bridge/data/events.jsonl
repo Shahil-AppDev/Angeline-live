@@ -1,0 +1,10 @@
+{"delay":1000,"event":{"type":"CHAT_MESSAGE","timestamp":1737381600000,"user":{"id":"user1","username":"alice_mystic","nickname":"Alice"},"data":{"message":"!oracle"}}}
+{"delay":3000,"event":{"type":"CHAT_MESSAGE","timestamp":1737381603000,"user":{"id":"user2","username":"bob_seeker","nickname":"Bob"},"data":{"message":"Vais-je trouver l'amour cette année ?"}}}
+{"delay":5000,"event":{"type":"GIFT","timestamp":1737381608000,"user":{"id":"user3","username":"charlie_fan","nickname":"Charlie"},"data":{"giftId":5655,"giftName":"Rose","giftCount":1,"diamondCost":1}}}
+{"delay":8000,"event":{"type":"FOLLOW","timestamp":1737381616000,"user":{"id":"user4","username":"diana_believer","nickname":"Diana"}}}
+{"delay":10000,"event":{"type":"CHAT_MESSAGE","timestamp":1737381626000,"user":{"id":"user5","username":"eve_curious","nickname":"Eve"},"data":{"message":"Quelle est ma destinée professionnelle ?"}}}
+{"delay":12000,"event":{"type":"GIFT","timestamp":1737381638000,"user":{"id":"user6","username":"frank_generous","nickname":"Frank"},"data":{"giftId":5827,"giftName":"Coeur","giftCount":5,"diamondCost":5}}}
+{"delay":15000,"event":{"type":"CHAT_MESSAGE","timestamp":1737381653000,"user":{"id":"user7","username":"grace_hopeful","nickname":"Grace"},"data":{"message":"!oracle"}}}
+{"delay":18000,"event":{"type":"SHARE","timestamp":1737381671000,"user":{"id":"user8","username":"henry_supporter","nickname":"Henry"}}}
+{"delay":20000,"event":{"type":"CHAT_MESSAGE","timestamp":1737381691000,"user":{"id":"user9","username":"iris_dreamer","nickname":"Iris"},"data":{"message":"Dois-je faire confiance à cette personne ?"}}}
+{"delay":22000,"event":{"type":"LIKE","timestamp":1737381713000,"user":{"id":"user10","username":"jack_fan","nickname":"Jack"}}}
